@@ -38,13 +38,18 @@ Open http://localhost:8080
 
 ## Deploy
 
-### GitHub Pages (recommended)
+The live site repo is **public and website-only**:
 
-1. Push this repo to GitHub
-2. **Settings → Pages → Build and deployment**
-   - Source: **GitHub Actions**
-3. Push to `main` — the workflow in `.github/workflows/deploy-pages.yml` deploys the `website/` folder automatically
-4. For a custom domain, edit `website/CNAME` (default: `gpxviewerapp.com`) and add these DNS records at your registrar:
+**https://github.com/lucasdemap/gpxviewer-website**
+
+The iOS app stays local — it is not on GitHub.
+
+### GitHub Pages
+
+1. Edit files in this `website/` folder locally
+2. Copy changes into the `gpxviewer-website` repo and push to `main`
+3. GitHub Actions deploys automatically
+4. Custom domain is set in `CNAME` (`gpxviewerapp.com`). DNS at your registrar:
 
    | Type | Name | Value |
    |------|------|-------|
@@ -52,9 +57,7 @@ Open http://localhost:8080
    | A | `@` | `185.199.109.153` |
    | A | `@` | `185.199.110.153` |
    | A | `@` | `185.199.111.153` |
-   | CNAME | `www` | `<your-username>.github.io` |
-
-   Or use only a CNAME for `www` → `<your-username>.github.io` if you prefer www.
+   | CNAME | `www` | `lucasdemap.github.io` |
 
 5. In GitHub **Settings → Pages**, enable **Enforce HTTPS**
 
