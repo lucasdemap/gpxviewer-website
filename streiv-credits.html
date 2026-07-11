@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPX Viewer — Credits</title>
+    <meta
+      name="description"
+      content="GPX Viewer is designed and maintained by Streiv, an independent app studio focused on outdoor navigation tools."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gpxviewerapp.com/streiv-credits.html" />
+    <meta name="theme-color" content="#14388c" />
+    <link rel="icon" href="images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js"></script>
+    <script src="js/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Credits</h1>
+        <p>Built for hikers, cyclists, and anyone who navigates with GPX files.</p>
+      </div>
+    </div>
+
+    <main class="legal-content">
+      <div class="container" style="max-width: 720px;">
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>Developer</h3>
+          <p>
+            GPX Viewer is developed by
+            <a href="https://streiv.app" rel="noopener">Streiv</a>, an independent studio building
+            focused navigation apps for iPhone and Android.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>About Streiv</h3>
+          <p>
+            Streiv creates practical outdoor and mapping software. Visit
+            <a href="https://streiv.app" rel="noopener">streiv.app</a> to learn more about the studio
+            and other projects.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> GPX Viewer
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
