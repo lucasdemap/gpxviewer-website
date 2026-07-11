@@ -31,19 +31,38 @@ Web and app analytics will appear in the **same GA4 property**, so you can compa
 
 Connect Search Console so Google indexes **gpxviewerapp.com** and shows search performance.
 
-### Option A — Verify with Google Analytics (easiest)
+### Option A — DNS TXT record (Namecheap)
 
-Your site already has GA4 (`G-MWGRHGCMJ8`). Use the **same Google account** that owns the Firebase/GA property.
+Use this if Search Console only offers **Domain name provider** / **TXT** verification.
 
-1. Open [Google Search Console](https://search.google.com/search-console)
-2. **Add property** → URL prefix → `https://gpxviewerapp.com`
-3. Choose **Google Analytics** as the verification method
-4. Click **Verify**
+1. Open [Google Search Console](https://search.google.com/search-console) → **Add property**
+2. Choose **Domain** → enter `gpxviewerapp.com`
+3. Copy the **TXT record** value Google shows (looks like `google-site-verification=AbCdEf...`)
+4. In **Namecheap** → **Domain List** → **Manage** → **Advanced DNS**
+5. Click **Add New Record**:
 
-### Option B — HTML meta tag
+   | Type | Host | Value | TTL |
+   |------|------|-------|-----|
+   | TXT Record | `@` | `google-site-verification=...` | Automatic |
+
+   Paste the **full** value from Google (including `google-site-verification=`).
+
+6. Save. Wait **5–30 minutes** (sometimes up to 24h).
+7. Back in Search Console → **Verify**
+
+**Note:** Keep your existing **A records** (GitHub) and **CNAME** (`www`) — only *add* the TXT record, don’t remove them.
+
+### Option B — Verify with Google Analytics
+
+Your site already has GA4 (`G-MWGRHGCMJ8`). Use the **same Google account** that owns Firebase/GA.
+
+1. Search Console → **Add property** → URL prefix → `https://gpxviewerapp.com`
+2. Choose **Google Analytics** → **Verify**
+
+### Option C — HTML meta tag
 
 1. In Search Console, choose **HTML tag** verification
-2. Copy the `content` value from the meta tag (the long token string)
+2. Copy the `content` value from the meta tag
 3. Paste it in `js/config.js`:
 
 ```js
