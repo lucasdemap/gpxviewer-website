@@ -31,8 +31,9 @@
     <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
     <link rel="icon" href="../images/app-icon.png" type="image/png" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/lang.css" />
-    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="../css/lang.css?v=2" />
+
+<link rel="stylesheet" href="../css/blog.css" />
     <script src="../js/config.js"></script>
     <script src="../js/seo.js"></script>
     <script src="../js/analytics.js"></script>
@@ -66,14 +67,17 @@
           <span>GPX Viewer</span>
         </a>
         <div class="header-right">
-          <nav class="lang-switcher" aria-label="Language">
-            <a href="/blog/how-to-view-gpx-on-a-map.html" hreflang="en" class="is-active">EN</a>
-            <a href="/de/blog/how-to-view-gpx-on-a-map.html" hreflang="de">DE</a>
-            <a href="/fr/blog/how-to-view-gpx-on-a-map.html" hreflang="fr">FR</a>
-            <a href="/it/blog/how-to-view-gpx-on-a-map.html" hreflang="it">IT</a>
-            <a href="/pt/blog/how-to-view-gpx-on-a-map.html" hreflang="pt">PT</a>
-            <a href="/es/blog/how-to-view-gpx-on-a-map.html" hreflang="es">ES</a>
-          </nav>
+          <details class="lang-dropdown">
+            <summary aria-label="Language">EN · English</summary>
+            <div class="lang-dropdown-menu" role="navigation" aria-label="Language">
+              <a href="/blog/how-to-view-gpx-on-a-map.html" hreflang="en" class="is-active">English<small>EN</small></a>
+              <a href="/de/blog/how-to-view-gpx-on-a-map.html" hreflang="de">Deutsch<small>DE</small></a>
+              <a href="/fr/blog/how-to-view-gpx-on-a-map.html" hreflang="fr">Français<small>FR</small></a>
+              <a href="/it/blog/how-to-view-gpx-on-a-map.html" hreflang="it">Italiano<small>IT</small></a>
+              <a href="/pt/blog/how-to-view-gpx-on-a-map.html" hreflang="pt">Português<small>PT</small></a>
+              <a href="/es/blog/how-to-view-gpx-on-a-map.html" hreflang="es">Español<small>ES</small></a>
+            </div>
+          </details>
 <nav class="nav-links">
 <a href="../#features">Features</a>
           <a href="../blog/">Blog</a>
@@ -273,7 +277,6 @@
     </footer>
 
     <script src="../js/site.js"></script>
-    <script src="../js/languages.js"></script>
-    <script src="../js/lang-switcher.js"></script>
+    <script src="../js/lang-dropdown.js"></script>
   </body>
 </html>

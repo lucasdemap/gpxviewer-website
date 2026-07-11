@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Embed static language switchers and fix header layout."""
+"""Generate dropdown language switchers for all site pages."""
 
 import re
 from pathlib import Path
@@ -7,12 +7,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 LANGS = [
-    ("en", "/"),
-    ("de", "/de/"),
-    ("fr", "/fr/"),
-    ("it", "/it/"),
-    ("pt", "/pt/"),
-    ("es", "/es/"),
+    ("en", "/", "EN", "English"),
+    ("de", "/de/", "DE", "Deutsch"),
+    ("fr", "/fr/", "FR", "Français"),
+    ("it", "/it/", "IT", "Italiano"),
+    ("pt", "/pt/", "PT", "Português"),
+    ("es", "/es/", "ES", "Español"),
 ]
 
 LABELS = {
@@ -46,16 +46,24 @@ def href_for(lang_path: str, suffix: str) -> str:
 
 def build_switcher(page_lang: str, suffix: str) -> str:
     aria = LABELS.get(page_lang, "Language")
+    current_short = next(code.upper() for code, _, short, _ in LANGS if code == page_lang)
+    current_name = next(name for code, _, _, name in LANGS if code == page_lang)
+
     links = []
-    for code, path in LANGS:
+    for code, path, short, name in LANGS:
         active = ' class="is-active"' if code == page_lang else ""
         links.append(
-            f'            <a href="{href_for(path, suffix)}" hreflang="{code}"{active}>{code.upper()}</a>'
+            f'              <a href="{href_for(path, suffix)}" hreflang="{code}"{active}>'
+            f"{name}<small>{short}</small></a>"
         )
+
     return (
-        f'          <nav class="lang-switcher" aria-label="{aria}">\n'
+        f'          <details class="lang-dropdown">\n'
+        f'            <summary aria-label="{aria}">{current_short} · {current_name}</summary>\n'
+        f'            <div class="lang-dropdown-menu" role="navigation" aria-label="{aria}">\n'
         + "\n".join(links)
-        + "\n          </nav>"
+        + "\n            </div>\n"
+        f"          </details>"
     )
 
 
@@ -64,9 +72,37 @@ def extract_lang(html: str) -> str:
     return match.group(1) if match else "en"
 
 
-def patch_header(html: str, switcher: str) -> str:
-    # Remove JS placeholder or existing inline switcher inside nav-links.
+def depth_for(rel: Path) -> str:
+    return "../" * (len(rel.parts) - 1)
+
+
+def ensure_assets(html: str, depth: str) -> str:
+    lang_css = f"{depth}css/lang.css?v=2"
+    html = re.sub(r'\s*<link rel="stylesheet" href="[^"]*css/lang\.css(?:\?v=\d+)?" />\s*', "\n", html)
+    html = re.sub(
+        r'(<link rel="stylesheet" href="[^"]*style\.css[^"]*" />)',
+        rf'\1\n    <link rel="stylesheet" href="{lang_css}" />',
+        html,
+        count=1,
+    )
+
+    dropdown_js = f'{depth}js/lang-dropdown.js'
+    html = re.sub(r'\s*<script src="[^"]*lang-switcher\.js"></script>\s*', "\n", html)
+    html = re.sub(r'\s*<script src="[^"]*languages\.js"></script>\s*', "\n", html)
+    if dropdown_js not in html:
+        html = html.replace("</body>", f'    <script src="{dropdown_js}"></script>\n  </body>', 1)
+    return html
+
+
+def patch_html(html: str, switcher: str) -> str:
     html = re.sub(r"\s*<div data-lang-switcher></div>\s*", "\n", html)
+    html = re.sub(
+        r"\s*<details class=\"lang-dropdown\">.*?</details>\s*",
+        "\n",
+        html,
+        count=1,
+        flags=re.DOTALL,
+    )
     html = re.sub(
         r"\s*<nav class=\"lang-switcher\"[^>]*>.*?</nav>\s*",
         "\n",
@@ -76,80 +112,43 @@ def patch_header(html: str, switcher: str) -> str:
     )
 
     if '<div class="header-right">' in html:
-        html = re.sub(
-            r'(<div class="header-right">\s*)',
+        return re.sub(
+            r"(<div class=\"header-right\">\s*)",
             r"\1" + switcher + "\n",
             html,
             count=1,
         )
-        return html
 
-    # Privacy-style header: brand + switcher only.
-    privacy_match = re.search(
-        r'(<header class="site-header">\s*<div class="container">\s*<a class="brand"[^>]*>.*?</a>\s*)<nav class="nav-links">',
-        html,
-        flags=re.DOTALL,
-    )
-    if privacy_match and "nav-links" in html[privacy_match.end() : privacy_match.end() + 200]:
-        pass
-
-    if re.search(
-        r'<header class="site-header">\s*<div class="container">\s*<a class="brand"[^>]*>.*?</a>\s*(?!<div class="header-right">)',
-        html,
-        flags=re.DOTALL,
-    ):
-        html = re.sub(
-            r'(<header class="site-header">\s*<div class="container">\s*<a class="brand"[^>]*>.*?</a>\s*)',
-            r"\1" + '<div class="header-right">\n' + switcher + "\n",
-            html,
-            count=1,
-            flags=re.DOTALL,
-        )
-        html = re.sub(
-            r"(</nav>\s*)(</div>\s*</header>)",
-            r"\1        </div>\n      \2",
-            html,
-            count=1,
-        )
-        return html
-
-    return html
-
-
-def ensure_lang_css(html: str, depth: str) -> str:
-    href = f"{depth}css/lang.css"
-    if href in html:
-        return html
     return re.sub(
-        r'(<link rel="stylesheet" href="[^"]*style\.css[^"]*" />)',
-        r'\1\n    <link rel="stylesheet" href="' + href + '" />',
+        r'(<header class="site-header">\s*<div class="container">\s*<a class="brand"[^>]*>.*?</a>\s*)',
+        r"\1" + '<div class="header-right">\n' + switcher + "\n",
         html,
         count=1,
+        flags=re.DOTALL,
     )
 
 
 def main() -> None:
     changed = 0
     for path in sorted(ROOT.rglob("*.html")):
-        if ".git" in path.parts:
-            continue
-        rel = path.relative_to(ROOT)
-        html = path.read_text(encoding="utf-8")
-        if "site-header" not in html:
-            continue
-        if "data-lang-switcher" not in html and "lang-switcher" not in html:
+        if ".git" in path.parts or "site-header" not in path.read_text(encoding="utf-8"):
             continue
 
-        depth = "../" * (len(rel.parts) - 1)
+        rel = path.relative_to(ROOT)
+        html = path.read_text(encoding="utf-8")
+        if "header-right" not in html and "lang-switcher" not in html and "lang-dropdown" not in html:
+            continue
+
         page_lang = extract_lang(html)
         suffix = page_suffix(rel)
         switcher = build_switcher(page_lang, suffix)
-        updated = patch_header(html, switcher)
-        updated = ensure_lang_css(updated, depth)
+        updated = patch_html(html, switcher)
+        updated = ensure_assets(updated, depth_for(rel))
         if updated != html:
             path.write_text(updated, encoding="utf-8")
             print(f"Updated {rel}")
             changed += 1
+
     print(f"Done. {changed} files updated.")
 
 

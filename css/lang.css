@@ -1,43 +1,101 @@
-.lang-switcher,
-[data-lang-switcher] .lang-switcher {
-  display: flex;
+.lang-dropdown {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.lang-dropdown summary {
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px;
+  gap: 6px;
+  padding: 8px 12px;
   border-radius: 999px;
   background: rgba(60, 60, 67, 0.12);
-  font-size: 0.78rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-[data-lang-switcher] {
-  flex-shrink: 0;
-}
-
-.lang-switcher a {
-  padding: 6px 10px;
-  border-radius: 999px;
-  color: var(--muted);
-  line-height: 1;
-}
-
-.lang-switcher a:hover {
   color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
-.lang-switcher a.is-active {
+.lang-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-dropdown summary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--muted);
+  transition: transform 0.15s ease;
+}
+
+.lang-dropdown[open] summary {
   background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lang-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  padding: 6px;
+  border-radius: 14px;
+  background: white;
+  border: 0.5px solid rgba(60, 60, 67, 0.14);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.lang-dropdown-menu a:hover {
+  background: var(--blue-soft);
   color: var(--blue);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-.header-right .lang-switcher {
-  margin-right: 0;
+.lang-dropdown-menu a.is-active {
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 700;
 }
 
-@media (max-width: 480px) {
-  .lang-switcher a:not(.is-active) {
-    display: none;
+.lang-dropdown-menu a small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.lang-dropdown-menu a.is-active small {
+  color: var(--blue);
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .lang-dropdown {
+    order: -1;
   }
 }

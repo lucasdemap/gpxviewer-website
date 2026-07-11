@@ -28,9 +28,9 @@
     <meta property="og:locale" content="it_IT" />
     <link rel="icon" href="../../images/app-icon.png" type="image/png" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/blog.css" />
-    <link rel="stylesheet" href="../../css/lang.css" />
-    <script src="../../js/config.js"></script>
+    <link rel="stylesheet" href="../../css/lang.css?v=2" />
+<link rel="stylesheet" href="../../css/blog.css" />
+<script src="../../js/config.js"></script>
     <script src="../../js/seo.js"></script>
     <script src="../../js/analytics.js"></script>
   </head>
@@ -42,14 +42,17 @@
           <span>GPX Viewer</span>
         </a>
         <div class="header-right">
-          <nav class="lang-switcher" aria-label="Lingua">
-            <a href="/blog/index.html" hreflang="en">EN</a>
-            <a href="/de/blog/index.html" hreflang="de">DE</a>
-            <a href="/fr/blog/index.html" hreflang="fr">FR</a>
-            <a href="/it/blog/index.html" hreflang="it" class="is-active">IT</a>
-            <a href="/pt/blog/index.html" hreflang="pt">PT</a>
-            <a href="/es/blog/index.html" hreflang="es">ES</a>
-          </nav>
+          <details class="lang-dropdown">
+            <summary aria-label="Lingua">IT · Italiano</summary>
+            <div class="lang-dropdown-menu" role="navigation" aria-label="Lingua">
+              <a href="/blog/index.html" hreflang="en">English<small>EN</small></a>
+              <a href="/de/blog/index.html" hreflang="de">Deutsch<small>DE</small></a>
+              <a href="/fr/blog/index.html" hreflang="fr">Français<small>FR</small></a>
+              <a href="/it/blog/index.html" hreflang="it" class="is-active">Italiano<small>IT</small></a>
+              <a href="/pt/blog/index.html" hreflang="pt">Português<small>PT</small></a>
+              <a href="/es/blog/index.html" hreflang="es">Español<small>ES</small></a>
+            </div>
+          </details>
 <nav class="nav-links">
           <a href="/it/#features">Funzionalità</a>
           <a href="/it/blog/">Blog</a>
@@ -124,9 +127,7 @@
         </div>
       </div>
     </footer>
-
-    <script src="../../js/languages.js"></script>
-    <script src="../../js/lang-switcher.js"></script>
-    <script src="../../js/site.js"></script>
+<script src="../../js/site.js"></script>
+      <script src="../../js/lang-dropdown.js"></script>
   </body>
 </html>
