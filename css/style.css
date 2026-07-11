@@ -296,10 +296,18 @@ img {
   margin: 0 auto;
 }
 
-.phone-device img {
+.phone-device img,
+.phone-device video {
   display: block;
   width: 100%;
   height: auto;
+  vertical-align: top;
+}
+
+.phone-video {
+  background: #000;
+  object-fit: cover;
+  aspect-ratio: 9 / 19.5;
 }
 
 .section-screenshots {
