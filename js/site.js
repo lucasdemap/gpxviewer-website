@@ -2,7 +2,7 @@
   const config = window.GPX_SITE_CONFIG || {};
   const appStoreUrl = config.appStoreUrl || "#";
   const playStoreUrl = config.playStoreUrl || "#";
-  const contactEmail = config.contactEmail || "contact@gpxviewerapp.com";
+  const contactEmail = config.contactEmail || "lucas@streiv.app";
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
