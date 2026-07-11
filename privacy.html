@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — GPX Viewer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js"></script>
+    <script src="js/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">⌖</span>
+          <span>GPX Viewer</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container" style="max-width: 760px;">
+        <h1>Privacy Policy</h1>
+        <p class="section-intro">Last updated: March 2026</p>
+
+        <article class="faq-item" style="margin-bottom: 16px;">
+          <h3>Overview</h3>
+          <p>
+            GPX Viewer (“the app”) is developed by Streiv. This policy explains what information the
+            app and website collect and how it is used.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 16px;">
+          <h3>App data</h3>
+          <p>
+            Routes and GPX files you import stay on your device unless you choose to export or
+            share them. Location data is used only when you enable location features to show your
+            position on the map.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 16px;">
+          <h3>Analytics</h3>
+          <p>
+            The app and website use Google Analytics / Firebase Analytics to understand usage and
+            improve the product. Analytics data is aggregated and does not include the contents of
+            your GPX files.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 16px;">
+          <h3>Purchases</h3>
+          <p>
+            In-app purchases are processed by Apple. We do not receive your payment card details.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Contact</h3>
+          <p>
+            Questions about privacy?
+            <a id="privacy-contact" href="mailto:lucas@streiv.app">lucas@streiv.app</a>
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© <span id="year"></span> Streiv · GPX Viewer</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const email = (window.GPX_SITE_CONFIG && window.GPX_SITE_CONFIG.contactEmail) || "lucas@streiv.app";
+      const link = document.getElementById("privacy-contact");
+      if (link) {
+        link.href = "mailto:" + email;
+        link.textContent = email;
+      }
+    </script>
+  </body>
+</html>

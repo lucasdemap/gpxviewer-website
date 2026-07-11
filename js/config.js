@@ -1,0 +1,7 @@
+// 1. Firebase Console → Project gpx-reader-e5ba6 → Add app → Web
+// 2. Copy the Measurement ID (G-XXXXXXXX) below
+window.GPX_SITE_CONFIG = {
+  gaMeasurementId: "G-MWGRHGCMJ8",
+  appStoreUrl: "https://apps.apple.com/app/id0000000000",
+  contactEmail: "lucas@streiv.app",
+};
