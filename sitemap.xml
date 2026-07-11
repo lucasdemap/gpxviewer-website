@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- English -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gpxviewerapp.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/" />
-    <xhtml:link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,29 +18,28 @@
   <url>
     <loc>https://gpxviewerapp.com/blog/what-is-a-gpx-file.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://gpxviewerapp.com/blog/how-to-open-gpx-files-on-iphone.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://gpxviewerapp.com/blog/how-to-view-gpx-on-a-map.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://gpxviewerapp.com/blog/best-gpx-viewer-for-hiking.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://gpxviewerapp.com/blog/how-to-create-gpx-cycling-routes.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
-  <!-- German -->
   <url>
     <loc>https://gpxviewerapp.com/de/</loc>
     <changefreq>weekly</changefreq>
@@ -90,7 +80,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- French -->
   <url>
     <loc>https://gpxviewerapp.com/fr/</loc>
     <changefreq>weekly</changefreq>
@@ -131,7 +120,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Italian -->
   <url>
     <loc>https://gpxviewerapp.com/it/</loc>
     <changefreq>weekly</changefreq>
@@ -172,7 +160,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Portuguese -->
   <url>
     <loc>https://gpxviewerapp.com/pt/</loc>
     <changefreq>weekly</changefreq>
@@ -213,7 +200,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Spanish -->
   <url>
     <loc>https://gpxviewerapp.com/es/</loc>
     <changefreq>weekly</changefreq>
@@ -251,6 +237,126 @@
   </url>
   <url>
     <loc>https://gpxviewerapp.com/es/blog/how-to-create-gpx-cycling-routes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/what-is-a-gpx-file.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/how-to-open-gpx-files-on-iphone.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/how-to-view-gpx-on-a-map.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/best-gpx-viewer-for-hiking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/nl/blog/how-to-create-gpx-cycling-routes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/what-is-a-gpx-file.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/how-to-open-gpx-files-on-iphone.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/how-to-view-gpx-on-a-map.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/best-gpx-viewer-for-hiking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/pl/blog/how-to-create-gpx-cycling-routes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/how-to-open-gpx-files-on-iphone.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/how-to-view-gpx-on-a-map.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/best-gpx-viewer-for-hiking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gpxviewerapp.com/id/blog/how-to-create-gpx-cycling-routes.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

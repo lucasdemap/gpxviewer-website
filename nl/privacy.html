@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacybeleid — GPX Viewer</title>
+    <meta
+      name="description"
+      content="Privacybeleid voor GPX Viewer. Lees hoe we app-gegevens, locatie, analytics en aankopen verwerken."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gpxviewerapp.com/nl/privacy.html" />
+    <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/privacy.html" />
+    <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/privacy.html" />
+    <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/privacy.html" />
+    <link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/privacy.html" />
+    <link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/privacy.html" />
+    <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/privacy.html" />
+    <link rel="alternate" hreflang="nl" href="https://gpxviewerapp.com/nl/privacy.html" />
+    <link rel="alternate" hreflang="pl" href="https://gpxviewerapp.com/pl/privacy.html" />
+    <link rel="alternate" hreflang="id" href="https://gpxviewerapp.com/id/privacy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/privacy.html" />
+    <meta name="theme-color" content="#14388c" />
+    <link rel="icon" href="../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css?v=3" />
+    <link rel="stylesheet" href="../css/lang.css?v=5" />
+<script src="../js/config.js"></script>
+    <script src="../js/seo.js"></script>
+    <script src="../js/analytics.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/nl/">
+          <img class="brand-logo" src="../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+        <div class="header-right">
+          <details class="lang-dropdown">
+            <summary aria-label="Taal">NL</summary>
+            <div class="lang-dropdown-menu" role="navigation" aria-label="Taal">
+              <a href="/privacy.html" hreflang="en" title="English">EN</a>
+              <a href="/de/privacy.html" hreflang="de" title="Deutsch">DE</a>
+              <a href="/fr/privacy.html" hreflang="fr" title="Français">FR</a>
+              <a href="/it/privacy.html" hreflang="it" title="Italiano">IT</a>
+              <a href="/pt/privacy.html" hreflang="pt" title="Português">PT</a>
+              <a href="/es/privacy.html" hreflang="es" title="Español">ES</a>
+              <a href="/nl/privacy.html" hreflang="nl" title="Nederlands" class="is-active">NL</a>
+              <a href="/pl/privacy.html" hreflang="pl" title="Polski">PL</a>
+              <a href="/id/privacy.html" hreflang="id" title="Indonesia">ID</a>
+            </div>
+          </details>
+</div>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Privacybeleid</h1>
+        <p>Laatst bijgewerkt: maart 2026</p>
+      </div>
+    </div>
+
+    <main class="legal-content">
+      <div class="container" style="max-width: 720px;">
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>Overzicht</h3>
+          <p>
+            GPX Viewer („de app") wordt ontwikkeld door het GPX Viewer-team. Dit beleid legt uit welke
+            informatie de app en website verzamelen en hoe deze wordt gebruikt.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>App-gegevens</h3>
+          <p>
+            Routes en GPX-bestanden die je importeert, blijven op je apparaat, tenzij je ervoor kiest
+            om ze te exporteren of te delen. Locatiegegevens worden alleen gebruikt wanneer je
+            locatiefuncties inschakelt om je positie op de kaart te tonen.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>Analytics</h3>
+          <p>
+            De app en website gebruiken Google Analytics / Firebase Analytics om het gebruik te
+            begrijpen en het product te verbeteren. Analytics-gegevens worden geaggregeerd en
+            bevatten niet de inhoud van je GPX-bestanden.
+          </p>
+        </article>
+
+        <article class="faq-item" style="margin-bottom: 12px;">
+          <h3>Aankopen</h3>
+          <p>
+            In-app aankopen worden verwerkt door Apple en Google. Wij ontvangen geen gegevens van
+            je betaalkaart.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Contact</h3>
+          <p>
+            Vragen over privacy?
+            <a id="privacy-contact" href="mailto:lucas@streiv.app">lucas@streiv.app</a>
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="../images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> GPX Viewer
+        </span>
+        <div class="footer-links">
+          <a href="/nl/">Startpagina</a>
+          <a href="blog/">Blog</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const email = (window.GPX_SITE_CONFIG && window.GPX_SITE_CONFIG.contactEmail) || "lucas@streiv.app";
+      const link = document.getElementById("privacy-contact");
+      if (link) {
+        link.href = "mailto:" + email;
+        link.textContent = email;
+      }
+    </script>
+      <script src="../js/lang-dropdown.js"></script>
+  </body>
+</html>

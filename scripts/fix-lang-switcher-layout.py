@@ -13,6 +13,9 @@ LANGS = [
     ("it", "/it/", "IT", "Italiano"),
     ("pt", "/pt/", "PT", "Português"),
     ("es", "/es/", "ES", "Español"),
+    ("nl", "/nl/", "NL", "Nederlands"),
+    ("pl", "/pl/", "PL", "Polski"),
+    ("id", "/id/", "ID", "Indonesia"),
 ]
 
 LABELS = {
@@ -22,12 +25,15 @@ LABELS = {
     "it": "Lingua",
     "pt": "Idioma",
     "es": "Idioma",
+    "nl": "Taal",
+    "pl": "Język",
+    "id": "Bahasa",
 }
 
 
 def page_suffix(rel: Path) -> str:
     parts = rel.parts
-    if parts[0] in {"de", "fr", "it", "pt", "es"}:
+    if parts[0] in {"de", "fr", "it", "pt", "es", "nl", "pl", "id"}:
         rest = Path(*parts[1:])
     else:
         rest = rel
