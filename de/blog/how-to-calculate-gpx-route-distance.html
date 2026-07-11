@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPX-Routendistanz berechnen</title>
+    <meta name="description" content="Distanz einer GPX-Route aus GPS-Trackpunkten berechnen. GPX Viewer zeigt die genaue Trail-Distanz automatisch." />
+    <meta name="keywords" content="gpx distanz, gpx strecke berechnen" />
+    <link rel="canonical" href="https://gpxviewerapp.com/de/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="nl" href="https://gpxviewerapp.com/nl/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="pl" href="https://gpxviewerapp.com/pl/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="id" href="https://gpxviewerapp.com/id/blog/how-to-calculate-gpx-route-distance.html" />
+    <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/how-to-calculate-gpx-route-distance.html" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/de/blog/how-to-calculate-gpx-route-distance.html" />
+    <meta property="og:title" content="GPX-Routendistanz berechnen" />
+    <meta property="og:description" content="Distanz einer GPX-Route aus GPS-Trackpunkten berechnen. GPX Viewer zeigt die genaue Trail-Distanz automatisch." />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <link rel="icon" href="../../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/lang.css?v=5" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <script src="../../js/config.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "GPX-Routendistanz berechnen",
+        "datePublished": "2026-07-22",
+        "inLanguage": "de",
+        "author": { "@type": "Person", "name": "GPX Viewer" },
+        "image": "https://gpxviewerapp.com/images/og-image.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "GPX Viewer",
+          "logo": { "@type": "ImageObject", "url": "https://gpxviewerapp.com/images/app-icon.png" }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/de/">
+          <img class="brand-logo" src="../../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+        <div class="header-right">
+          <nav class="nav-links">
+            <a href="/de/#features">Funktionen</a>
+            <a href="/de/blog/">Blog</a>
+            <a href="/de/#pricing">Pro</a>
+                      <details class="lang-dropdown">
+            <summary aria-label="Sprache">DE</summary>
+            <div class="lang-dropdown-menu" role="navigation" aria-label="Sprache">
+              <a href="/blog/how-to-calculate-gpx-route-distance.html" hreflang="en" title="English">EN</a>
+              <a href="/de/blog/how-to-calculate-gpx-route-distance.html" hreflang="de" title="Deutsch" class="is-active">DE</a>
+              <a href="/fr/blog/how-to-calculate-gpx-route-distance.html" hreflang="fr" title="Français">FR</a>
+              <a href="/it/blog/how-to-calculate-gpx-route-distance.html" hreflang="it" title="Italiano">IT</a>
+              <a href="/pt/blog/how-to-calculate-gpx-route-distance.html" hreflang="pt" title="Português">PT</a>
+              <a href="/es/blog/how-to-calculate-gpx-route-distance.html" hreflang="es" title="Español">ES</a>
+              <a href="/nl/blog/how-to-calculate-gpx-route-distance.html" hreflang="nl" title="Nederlands">NL</a>
+              <a href="/pl/blog/how-to-calculate-gpx-route-distance.html" hreflang="pl" title="Polski">PL</a>
+              <a href="/id/blog/how-to-calculate-gpx-route-distance.html" hreflang="id" title="Indonesia">ID</a>
+            </div>
+          </details>
+            <div class="store-badges store-badges--header">
+              <a class="store-badge app-store-link" href="#" data-location="header">
+                <img src="../../images/app-store-badge.svg" alt="Im App Store laden" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="header">
+                <img src="../../images/google-play-badge.png" alt="Bei Google Play herunterladen" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>GPX-Routendistanz berechnen</h1>
+        <p>Echte Trail-Distanz aus GPS-Punkten — nicht Luftlinie.</p>
+      </div>
+    </div>
+
+    <main class="article-page">
+      <div class="container article-layout">
+        <article class="article-content">
+          <p class="article-meta"><time datetime="2026-07-22">22. Juli 2026</time></p>
+          <p>Luftlinie auf der Karte unterschätzt Trails. GPX-Distanz summiert jeden GPS-Punkt entlang des echten Wegs.</p>
+
+          <h2>Automatisch in GPX Viewer</h2>
+
+          <p>Datei in <a href="../">GPX Viewer</a> öffnen — Gesamtdistanz erscheint sofort. Kombinieren Sie mit <a href="how-to-view-gpx-elevation-data.html">Höhendaten</a> zur Tagesplanung.</p>
+
+          <p>Weiter: <a href="how-to-view-gpx-on-a-map.html">Auf Karte anzeigen</a> · <a href="what-is-a-gpx-file-reader.html">GPX-Reader</a></p>
+          <div class="article-cta">
+            <h2>GPX Viewer kostenlos testen</h2>
+            <p>GPX importieren und die Distanz in GPX Viewer sehen.</p>
+            <div class="store-badges">
+              <a class="store-badge app-store-link" href="#" data-location="article_cta">
+                <img src="../../images/app-store-badge-white.svg" alt="Im App Store laden" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="article_cta">
+                <img src="../../images/google-play-badge.png" alt="Bei Google Play herunterladen" />
+              </a>
+            </div>
+          </div>
+          <nav class="article-nav">
+            <a href="/de/blog/">← Zurück zu allen Ratgebern</a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="../../images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> GPX Viewer
+        </span>
+        <div class="footer-links">
+          <a href="/de/">Startseite</a>
+          <a href="/de/privacy.html">Datenschutz</a>
+          <a id="footer-contact" href="mailto:lucas@streiv.app">Kontakt</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/site.js"></script>
+    <script src="../../js/lang-dropdown.js"></script>
+  </body>
+</html>

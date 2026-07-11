@@ -447,6 +447,21 @@ img {
   fill: currentColor;
 }
 
+.feature-bike-icon {
+  width: 22px;
+  height: 17px;
+  display: block;
+  background-color: currentColor;
+  -webkit-mask-image: url("../images/bicycle-icon.png");
+  mask-image: url("../images/bicycle-icon.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
 .feature-card h3 {
   margin: 0 0 6px;
   font-size: 1rem;
