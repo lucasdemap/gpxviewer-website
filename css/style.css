@@ -676,6 +676,12 @@ img {
     display: none;
   }
 
+  .header-right,
+  .nav-links {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
   .cta-inner {
     flex-direction: column;
     align-items: flex-start;

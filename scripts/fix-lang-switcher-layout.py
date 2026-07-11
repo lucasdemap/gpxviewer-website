@@ -46,20 +46,18 @@ def href_for(lang_path: str, suffix: str) -> str:
 
 def build_switcher(page_lang: str, suffix: str) -> str:
     aria = LABELS.get(page_lang, "Language")
-    current_short = next(code.upper() for code, _, short, _ in LANGS if code == page_lang)
-    current_name = next(name for code, _, _, name in LANGS if code == page_lang)
+    current_short = next(short for code, _, short, _ in LANGS if code == page_lang)
 
     links = []
     for code, path, short, name in LANGS:
         active = ' class="is-active"' if code == page_lang else ""
         links.append(
-            f'              <a href="{href_for(path, suffix)}" hreflang="{code}"{active}>'
-            f"{name}<small>{short}</small></a>"
+            f'              <a href="{href_for(path, suffix)}" hreflang="{code}" title="{name}"{active}>{short}</a>'
         )
 
     return (
         f'          <details class="lang-dropdown">\n'
-        f'            <summary aria-label="{aria}">{current_short} · {current_name}</summary>\n'
+        f'            <summary aria-label="{aria}">{current_short}</summary>\n'
         f'            <div class="lang-dropdown-menu" role="navigation" aria-label="{aria}">\n'
         + "\n".join(links)
         + "\n            </div>\n"
@@ -77,7 +75,7 @@ def depth_for(rel: Path) -> str:
 
 
 def ensure_assets(html: str, depth: str) -> str:
-    lang_css = f"{depth}css/lang.css?v=2"
+    lang_css = f"{depth}css/lang.css?v=3"
     html = re.sub(r'\s*<link rel="stylesheet" href="[^"]*css/lang\.css(?:\?v=\d+)?" />\s*', "\n", html)
     html = re.sub(
         r'(<link rel="stylesheet" href="[^"]*style\.css[^"]*" />)',
@@ -86,7 +84,7 @@ def ensure_assets(html: str, depth: str) -> str:
         count=1,
     )
 
-    dropdown_js = f'{depth}js/lang-dropdown.js'
+    dropdown_js = f"{depth}js/lang-dropdown.js"
     html = re.sub(r'\s*<script src="[^"]*lang-switcher\.js"></script>\s*', "\n", html)
     html = re.sub(r'\s*<script src="[^"]*languages\.js"></script>\s*', "\n", html)
     if dropdown_js not in html:
@@ -100,20 +98,32 @@ def patch_html(html: str, switcher: str) -> str:
         r"\s*<details class=\"lang-dropdown\">.*?</details>\s*",
         "\n",
         html,
-        count=1,
         flags=re.DOTALL,
     )
     html = re.sub(
         r"\s*<nav class=\"lang-switcher\"[^>]*>.*?</nav>\s*",
         "\n",
         html,
-        count=1,
         flags=re.DOTALL,
     )
 
+    if '<div class="store-badges' in html:
+        return html.replace(
+            '<div class="store-badges',
+            switcher + "\n          <div class=\"store-badges",
+            1,
+        )
+
+    if '<nav class="nav-links">' in html:
+        return html.replace(
+            '<nav class="nav-links">',
+            "<nav class=\"nav-links\">\n" + switcher + "\n",
+            1,
+        )
+
     if '<div class="header-right">' in html:
         return re.sub(
-            r"(<div class=\"header-right\">\s*)",
+            r'(<div class="header-right">\s*)',
             r"\1" + switcher + "\n",
             html,
             count=1,
@@ -121,7 +131,7 @@ def patch_html(html: str, switcher: str) -> str:
 
     return re.sub(
         r'(<header class="site-header">\s*<div class="container">\s*<a class="brand"[^>]*>.*?</a>\s*)',
-        r"\1" + '<div class="header-right">\n' + switcher + "\n",
+        r"\1<div class=\"header-right\">\n" + switcher + "\n",
         html,
         count=1,
         flags=re.DOTALL,
