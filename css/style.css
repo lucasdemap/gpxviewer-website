@@ -159,11 +159,37 @@ img {
 }
 
 .store-links,
-.store-buttons {
+.store-buttons,
+.store-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+}
+
+.store-badge {
+  display: inline-flex;
+  line-height: 0;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.store-badge:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.store-badge img {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.store-badges--header .store-badge img {
+  height: 36px;
+}
+
+.store-badges--on-dark .store-badge img {
+  height: 40px;
 }
 
 /* Hero */
@@ -651,7 +677,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .nav-links a:not(.btn) {
+  .nav-links a:not(.btn):not(.store-badge) {
     display: none;
   }
 
@@ -671,7 +697,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .store-links .btn-outline {
+  .store-badges--header .store-badge:last-child {
     display: none;
   }
 }
