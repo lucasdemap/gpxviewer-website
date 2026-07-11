@@ -171,10 +171,18 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 40px;
   line-height: 0;
   transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.store-badge.app-store-link {
+  width: 120px;
+  height: 40px;
+}
+
+.store-badge.play-store-link {
+  width: 162px;
+  height: 48px;
 }
 
 .store-badge:hover {
@@ -190,9 +198,14 @@ img {
   object-position: center;
 }
 
-.store-badges--header .store-badge {
+.store-badges--header .store-badge.app-store-link {
   width: 108px;
   height: 36px;
+}
+
+.store-badges--header .store-badge.play-store-link {
+  width: 146px;
+  height: 43px;
 }
 
 /* Hero */
