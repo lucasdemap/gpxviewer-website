@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo ver rutas GPX en un mapa — Guía GPX Viewer</title>
+    <meta
+      name="description"
+      content="Visualiza rutas GPX en mapas interactivos con waypoints, perfiles de elevación y estadísticas de distancia. El mejor visor de mapas GPX para senderismo y ciclismo."
+    />
+    <meta
+      name="keywords"
+      content="ver gpx en mapa, visor mapa gpx, mapa ruta gpx, elevación gpx, waypoints gpx"
+    />
+    <link rel="canonical" href="https://gpxviewerapp.com/es/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/how-to-view-gpx-on-a-map.html" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/es/blog/how-to-view-gpx-on-a-map.html" />
+    <meta property="og:title" content="Cómo ver rutas GPX en un mapa — Guía GPX Viewer" />
+    <meta
+      property="og:description"
+      content="Visualiza rutas GPX en mapas interactivos con waypoints, perfiles de elevación y estadísticas de distancia. Compara estilos de mapa para senderismo y ciclismo."
+    />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="../../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/lang.css" />
+    <script src="../../js/config.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cómo ver rutas GPX en un mapa",
+        "datePublished": "2026-07-11",
+        "inLanguage": "es",
+        "author": {
+          "@type": "Person",
+          "name": "Streiv"
+        },
+        "image": "https://gpxviewerapp.com/images/og-image.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Streiv",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gpxviewerapp.com/images/app-icon.png"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../">
+          <img class="brand-logo" src="../../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+        <nav class="nav-links">
+          <nav class="lang-switcher" aria-label="Idioma">
+            <a href="/blog/how-to-view-gpx-on-a-map.html" hreflang="en">EN</a>
+            <a href="/de/blog/how-to-view-gpx-on-a-map.html" hreflang="de">DE</a>
+            <a href="/fr/blog/how-to-view-gpx-on-a-map.html" hreflang="fr">FR</a>
+            <a href="/it/blog/how-to-view-gpx-on-a-map.html" hreflang="it">IT</a>
+            <a href="/pt/blog/how-to-view-gpx-on-a-map.html" hreflang="pt">PT</a>
+            <a href="/es/blog/how-to-view-gpx-on-a-map.html" hreflang="es" class="is-active">ES</a>
+          </nav>
+          <a href="../#features">Funciones</a>
+          <a href="../blog/">Blog</a>
+          <a href="../#pricing">Pro</a>
+          <div class="store-badges store-badges--header">
+            <a class="store-badge app-store-link" href="#" data-location="header">
+              <img src="../../images/app-store-badge.svg" alt="Descargar en App Store" />
+            </a>
+            <a class="store-badge play-store-link" href="#" data-location="header">
+              <img src="../../images/google-play-badge.png" alt="Disponible en Google Play" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Cómo ver rutas GPX en un mapa</h1>
+        <p>Convierte coordenadas GPS en bruto en un mapa de ruta claro con elevación y waypoints.</p>
+      </div>
+    </div>
+
+    <main class="article-page">
+      <div class="container article-layout">
+        <article class="article-content">
+          <p class="article-meta"><time datetime="2026-07-11">11 de julio de 2026</time> · Streiv</p>
+
+          <p>
+            Un archivo GPX es esencialmente una lista de pares de latitud y longitud. Útil para
+            ordenadores, pero poco práctico cuando estás en el inicio de un sendero intentando
+            decidir qué bifurcación tomar. Para <strong>ver GPX en un mapa</strong>, necesitas un
+            visor que dibuje esas coordenadas como una línea que puedas seguir — con contexto como
+            carreteras, terreno y waypoints etiquetados.
+          </p>
+          <p>
+            Esta guía explica cómo funcionan los visores de mapas GPX, qué información deberías ver
+            y cómo <a href="../">GPX Viewer</a> muestra rutas en iPhone y Android. Si aún no has
+            importado tu archivo, consulta primero
+            <a href="how-to-open-gpx-files-on-iphone.html">cómo abrir archivos GPX en iPhone y Android</a>.
+          </p>
+
+          <h2>Qué te muestra un buen visor de mapas GPX</h2>
+          <p>
+            Abrir un archivo .gpx debería ser instantáneo. En uno o dos segundos, un
+            <strong>visor de mapas GPX</strong> capaz muestra:
+          </p>
+          <ul>
+            <li>La ruta completa como una línea de track coloreada en el mapa</li>
+            <li>Marcadores de inicio y fin para saber en qué dirección viajar</li>
+            <li>Waypoints individuales con nombres y descripciones</li>
+            <li>Distancia total y desnivel positivo de toda la ruta</li>
+            <li>Un gráfico de perfil de elevación vinculado a la posición en el mapa</li>
+          </ul>
+          <p>
+            GPX Viewer presenta todo esto en una sola pantalla. Pellizca para hacer zoom, arrastra
+            para desplazarte y toca cualquier burbuja de waypoint para leer su etiqueta. El panel de
+            estadísticas de la ruta se actualiza mientras exploras distintas secciones del track.
+          </p>
+
+          <h2>Elegir el estilo de mapa adecuado</h2>
+          <p>
+            Cada terreno pide un mapa base distinto. GPX Viewer ofrece tres capas de mapa para
+            adaptar la vista a tu actividad:
+          </p>
+          <h3>Mapa estándar</h3>
+          <p>
+            Muestra carreteras, caminos, nombres de lugares y sombreado topográfico. Ideal para
+            rutas de ciclismo urbano y senderos señalizados donde la red viaria ayuda a orientarse.
+          </p>
+          <h3>Vista satélite</h3>
+          <p>
+            La imagen aérea revela cobertura arbórea, pedregales, cruces de ríos y caminos sin
+            marcar que los mapas vectoriales omiten. Los senderistas suelen preferir satélite al
+            <a href="best-gpx-viewer-for-hiking.html">seguir senderos GPX fuera de los caminos habituales</a>.
+          </p>
+          <h3>Vista híbrida</h3>
+          <p>
+            Combina imagen satélite con etiquetas de carreteras y senderos superpuestas. Útil cuando
+            quieres la realidad del terreno en foto más nombres legibles de calles y caminos.
+          </p>
+
+          <h2>Leer el perfil de elevación</h2>
+          <p>
+            La distancia sola no cuenta toda la historia. Una ruta de 10 km con 800 m de desnivel se
+            siente muy distinta de un bucle plano de 10 km. El gráfico de elevación bajo el mapa
+            muestra cada subida y bajada a lo largo del <strong>mapa de ruta GPX</strong>.
+          </p>
+          <p>
+            En GPX Viewer, desplázate por el perfil de elevación para inspeccionar tramos concretos.
+            Las secciones empinadas aparecen como subidas bruscas; el terreno ondulado muestra ondas
+            suaves. Usa esta vista previa para planificar el ritmo, estimar el tiempo y decidir si
+            llevar capas extra para los puntos altos.
+          </p>
+
+          <h2>Entender los waypoints en el mapa</h2>
+          <p>
+            Los waypoints son marcadores a lo largo de la ruta — cumbres, fuentes de agua,
+            cruces o notas personalizadas de quien creó el archivo. GPX Viewer muestra waypoints con
+            nombre como marcadores pulsables en el mapa.
+          </p>
+          <p>
+            Al tocar un waypoint en GPX Viewer, ves su nombre, coordenadas y elevación. Esto es
+            especialmente útil en cruces complejos donde la línea del sendero sola no deja claro el
+            giro correcto.
+          </p>
+
+          <h2>¿Por qué ver GPX en el teléfono?</h2>
+          <p>
+            Un archivo GPX es más útil cuando lo llevas en el bolsillo en el sendero o en la bici.
+            GPX Viewer mantiene el mapa en el teléfono donde lo necesitas — con posicionamiento GPS
+            opcional en tiempo real al actualizar a Pro.
+          </p>
+          <ul>
+            <li><strong>Importación instantánea</strong> — comparte un archivo desde Mail o Archivos directamente a GPX Viewer.</li>
+            <li><strong>GPS en vivo con Pro</strong> — ve tu posición en la ruta mientras te mueves.</li>
+            <li><strong>Gráficos de elevación</strong> — prevé las subidas antes de salir.</li>
+            <li><strong>Preparado para offline</strong> — carga tu ruta antes de perder señal.</li>
+          </ul>
+          <p>
+            Descarga <a href="../">GPX Viewer</a> gratis en iPhone y Android para convertir
+            cualquier archivo GPX en un mapa claro y seguible.
+          </p>
+
+          <h2>Seguir un mapa de ruta GPX en el terreno</h2>
+          <p>
+            Ver una ruta antes de salir te ayuda a estudiar el terreno. Seguirla durante la actividad
+            requiere comparar tu posición con la línea del track en tiempo real.
+          </p>
+          <p>
+            GPX Viewer Pro añade un punto de ubicación en vivo con flecha de orientación en el mapa.
+            Mientras caminas o pedaleas, puedes ver si estás en el track o te desvías. Es mucho más
+            fiable que revisar coordenadas a mano o adivinar con una captura estática.
+          </p>
+          <p>
+            ¿Nuevo en el formato? Lee
+            <a href="what-is-a-gpx-file.html">qué es un archivo GPX</a> para entender la diferencia
+            entre tracks, rutas y waypoints antes de salir.
+          </p>
+
+          <h2>Consejos para mapas de ruta GPX más claros</h2>
+          <ul>
+            <li><strong>Zoom para ajustar</strong> — usa el botón de ajustar ruta para que todo el track sea visible antes de empezar.</li>
+            <li><strong>Comprueba el punto de inicio</strong> — algunos archivos registran rutas al revés; confirma qué extremo es el inicio del sendero.</li>
+            <li><strong>Compara capas de mapa</strong> — cambia a satélite si el mapa estándar muestra un camino donde en el terreno no hay ninguno.</li>
+            <li><strong>Descarga offline si puedes</strong> — los tiles del mapa cargan más rápido en caché; planifica en zonas con señal débil.</li>
+            <li><strong>Exporta y comparte</strong> — tras ajustar una ruta, exporta un GPX nuevo; consulta nuestra
+              <a href="how-to-create-gpx-cycling-routes.html">guía de creación de rutas de ciclismo</a> para más detalles.</li>
+          </ul>
+
+          <h2>Por qué GPX Viewer para ver mapas</h2>
+          <p>
+            GPX Viewer está pensada específicamente para la experiencia de
+            <strong>mapa de ruta GPX</strong>: importación rápida, renderizado limpio del mapa,
+            gráficos de elevación y ubicación en vivo opcional en iOS y Android.
+          </p>
+          <p>
+            Ya sea que previsualices una caminata de fin de semana o revises un recorrido de marcha
+            ciclista, el objetivo es el mismo: ver la ruta con claridad, entender el terreno y
+            navegar con confianza.
+          </p>
+
+          <div class="article-cta">
+            <h2>Prueba GPX Viewer gratis</h2>
+            <p>Visualiza rutas GPX en mapas interactivos con perfiles de elevación en iPhone y Android.</p>
+            <div class="store-badges">
+              <a class="store-badge app-store-link" href="#" data-location="article_cta">
+                <img src="../../images/app-store-badge-white.svg" alt="Descargar en App Store" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="article_cta">
+                <img src="../../images/google-play-badge.png" alt="Disponible en Google Play" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="article-nav">
+            <a href="../blog/">← Volver a todas las guías</a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="../../images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> Streiv · GPX Viewer
+        </span>
+        <div class="footer-links">
+          <a href="../">Inicio</a>
+          <a href="../privacy.html">Privacidad</a>
+          <a id="footer-contact" href="mailto:lucas@streiv.app">Contacto</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/site.js"></script>
+  </body>
+</html>

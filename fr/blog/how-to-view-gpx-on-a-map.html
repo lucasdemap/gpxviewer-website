@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment afficher des itinéraires GPX sur une carte — Guide GPX Viewer</title>
+    <meta
+      name="description"
+      content="Affichez des itinéraires GPX sur des cartes interactives avec points de passage, profils d'altitude et statistiques de distance. Le visualiseur GPX idéal pour la randonnée et le vélo."
+    />
+    <meta
+      name="keywords"
+      content="afficher gpx sur carte, visualiseur carte gpx, carte itinéraire gpx, altitude gpx, points de passage gpx"
+    />
+    <link rel="canonical" href="https://gpxviewerapp.com/fr/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/blog/how-to-view-gpx-on-a-map.html" />
+    <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/how-to-view-gpx-on-a-map.html" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/fr/blog/how-to-view-gpx-on-a-map.html" />
+    <meta property="og:title" content="Comment afficher des itinéraires GPX sur une carte — Guide GPX Viewer" />
+    <meta
+      property="og:description"
+      content="Affichez des itinéraires GPX sur des cartes interactives avec points de passage, profils d'altitude et statistiques de distance pour la randonnée et le vélo."
+    />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/lang.css" />
+    <script src="../../js/config.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Comment afficher des itinéraires GPX sur une carte",
+        "datePublished": "2026-07-11",
+        "inLanguage": "fr",
+        "author": {
+          "@type": "Person",
+          "name": "Streiv"
+        },
+        "image": "https://gpxviewerapp.com/images/og-image.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Streiv",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gpxviewerapp.com/images/app-icon.png"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../">
+          <img class="brand-logo" src="../../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+        <nav class="nav-links">
+          <nav class="lang-switcher" aria-label="Langue">
+            <a href="/blog/how-to-view-gpx-on-a-map.html" hreflang="en">EN</a>
+            <a href="/de/blog/how-to-view-gpx-on-a-map.html" hreflang="de">DE</a>
+            <a href="/fr/blog/how-to-view-gpx-on-a-map.html" hreflang="fr" class="is-active">FR</a>
+            <a href="/it/blog/how-to-view-gpx-on-a-map.html" hreflang="it">IT</a>
+            <a href="/pt/blog/how-to-view-gpx-on-a-map.html" hreflang="pt">PT</a>
+            <a href="/es/blog/how-to-view-gpx-on-a-map.html" hreflang="es">ES</a>
+          </nav>
+          <a href="../#features">Fonctionnalités</a>
+          <a href="../blog/">Blog</a>
+          <a href="../#pricing">Pro</a>
+          <div class="store-badges store-badges--header">
+            <a class="store-badge app-store-link" href="#" data-location="header">
+              <img src="../../images/app-store-badge.svg" alt="Télécharger sur l'App Store" />
+            </a>
+            <a class="store-badge play-store-link" href="#" data-location="header">
+              <img src="../../images/google-play-badge.png" alt="Disponible sur Google Play" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Comment afficher des itinéraires GPX sur une carte</h1>
+        <p>Transformez des coordonnées GPS brutes en une carte d'itinéraire claire avec altitude et points de passage.</p>
+      </div>
+    </div>
+
+    <main class="article-page">
+      <div class="container article-layout">
+        <article class="article-content">
+          <p class="article-meta"><time datetime="2026-07-11">11 juillet 2026</time> · Streiv</p>
+
+          <p>
+            Un fichier GPX est essentiellement une liste de paires latitude-longitude. Utile pour les
+            ordinateurs, mais peu pratique lorsque vous êtes au départ d'un sentier en essayant de
+            savoir quel embranchement prendre. Pour <strong>afficher un GPX sur une carte</strong>, il
+            vous faut un visualiseur qui transforme ces coordonnées en une ligne à suivre — avec le
+            contexte des routes, du terrain et des points de passage étiquetés.
+          </p>
+          <p>
+            Ce guide explique comment fonctionnent les visualiseurs GPX, quelles informations vous
+            devriez voir, et comment <a href="../">GPX Viewer</a> affiche les itinéraires sur iPhone
+            et Android. Si vous n'avez pas encore importé votre fichier, consultez d'abord
+            <a href="how-to-open-gpx-files-on-iphone.html">comment ouvrir des fichiers GPX sur iPhone et Android</a>.
+          </p>
+
+          <h2>Ce qu'un bon visualiseur GPX affiche</h2>
+          <p>
+            Ouvrir un fichier .gpx devrait être instantané. En une ou deux secondes, un
+            <strong>visualiseur GPX</strong> performant affiche :
+          </p>
+          <ul>
+            <li>L'itinéraire complet sous forme de trace colorée sur la carte</li>
+            <li>Des marqueurs de départ et d'arrivée pour connaître le sens de marche</li>
+            <li>Des points de passage individuels avec noms et descriptions</li>
+            <li>La distance totale et le dénivelé positif de l'itinéraire</li>
+            <li>Un graphique de profil d'altitude lié à la position sur la carte</li>
+          </ul>
+          <p>
+            GPX Viewer présente tout cela sur un seul écran. Pincez pour zoomer, faites glisser pour
+            vous déplacer et appuyez sur n'importe quelle bulle de point de passage pour lire son
+            libellé. Le panneau de statistiques se met à jour au fil de votre exploration de la trace.
+          </p>
+
+          <h2>Choisir le bon style de carte</h2>
+          <p>
+            Chaque terrain appelle un fond de carte différent. GPX Viewer propose trois couches
+            pour adapter la vue à votre activité :
+          </p>
+          <h3>Carte standard</h3>
+          <p>
+            Affiche routes, sentiers, noms de lieux et ombrage topographique. Idéale pour les
+            itinéraires vélo urbains et les sentiers balisés où le réseau routier aide à l'orientation.
+          </p>
+          <h3>Vue satellite</h3>
+          <p>
+            L'imagerie aérienne révèle la couverture forestière, les champs de rochers, les traversées
+            de rivières et les sentiers non balisés que les cartes vectorielles manquent. Les randonneurs
+            préfèrent souvent le satellite pour
+            <a href="best-gpx-viewer-for-hiking.html">suivre des sentiers GPX hors des sentiers battus</a>.
+          </p>
+          <h3>Vue hybride</h3>
+          <p>
+            Combine l'imagerie satellite avec les noms de routes et de sentiers superposés. Utile
+            lorsque vous voulez la vérité du terrain en photo plus des noms de rues et de chemins lisibles.
+          </p>
+
+          <h2>Lire le profil d'altitude</h2>
+          <p>
+            La distance seule ne raconte pas toute l'histoire. Un parcours de 10 km avec 800 m de
+            dénivelé se ressent très différemment d'une boucle plate de 10 km. Le graphique d'altitude
+            sous la carte montre chaque montée et descente le long de la <strong>carte d'itinéraire GPX</strong>.
+          </p>
+          <p>
+            Dans GPX Viewer, faites défiler le profil d'altitude pour inspecter des segments précis.
+            Les sections raides apparaissent comme des montées nettes ; le terrain vallonné forme des
+            vagues douces. Utilisez cet aperçu pour planifier votre allure, estimer le temps et décider
+            si vous emportez des couches supplémentaires pour les points hauts.
+          </p>
+
+          <h2>Comprendre les points de passage sur la carte</h2>
+          <p>
+            Les points de passage sont des repères le long de l'itinéraire — sommets, sources d'eau,
+            carrefours ou notes personnalisées laissées par le créateur du fichier. GPX Viewer affiche
+            les points de passage nommés comme des marqueurs cliquables sur la carte.
+          </p>
+          <p>
+            Lorsque vous appuyez sur un point de passage dans GPX Viewer, vous voyez son nom, ses
+            coordonnées et son altitude. C'est particulièrement utile aux intersections complexes où
+            la ligne du sentier seule ne rend pas le bon virage évident.
+          </p>
+
+          <h2>Pourquoi afficher un GPX sur votre téléphone ?</h2>
+          <p>
+            Un fichier GPX est le plus utile lorsqu'il est dans votre poche sur le sentier ou en
+            sortie. GPX Viewer garde la carte sur votre téléphone là où vous en avez besoin — avec
+            le positionnement GPS en direct optionnel lorsque vous passez à Pro.
+          </p>
+          <ul>
+            <li><strong>Import instantané</strong> — partagez un fichier depuis Mail ou Fichiers directement dans GPX Viewer.</li>
+            <li><strong>GPS en direct avec Pro</strong> — voyez votre position sur l'itinéraire en mouvement.</li>
+            <li><strong>Profils d'altitude</strong> — prévisualisez les montées avant de partir.</li>
+            <li><strong>Prêt pour le hors ligne</strong> — chargez votre itinéraire avant de perdre le signal.</li>
+          </ul>
+          <p>
+            Téléchargez <a href="../">GPX Viewer</a> gratuitement sur iPhone et Android pour transformer
+            n'importe quel fichier GPX en carte claire et facile à suivre.
+          </p>
+
+          <h2>Suivre une carte d'itinéraire GPX sur le terrain</h2>
+          <p>
+            Afficher un itinéraire avant de partir vous aide à étudier le terrain. Le suivre pendant
+            l'activité nécessite de comparer votre position à la trace en temps réel.
+          </p>
+          <p>
+            GPX Viewer Pro ajoute un point de position en direct avec flèche de direction sur la carte.
+            En marchant ou en roulant, vous voyez si vous êtes sur la trace ou si vous vous en écartez.
+            C'est bien plus fiable que de vérifier manuellement les coordonnées ou de deviner à partir
+            d'une capture d'écran statique.
+          </p>
+          <p>
+            Nouveau avec le format ? Lisez
+            <a href="what-is-a-gpx-file.html">qu'est-ce qu'un fichier GPX</a> pour comprendre la différence
+            entre traces, itinéraires et points de passage avant de partir.
+          </p>
+
+          <h2>Conseils pour des cartes d'itinéraire GPX plus claires</h2>
+          <ul>
+            <li><strong>Zoomer pour tout voir</strong> — utilisez le bouton d'ajustement pour que toute la trace soit visible avant de partir.</li>
+            <li><strong>Vérifier le point de départ</strong> — certains fichiers enregistrent l'itinéraire à l'envers ; confirmez quel bout est le départ.</li>
+            <li><strong>Comparer les couches</strong> — passez en satellite si la carte standard montre un sentier inexistant sur le terrain.</li>
+            <li><strong>Télécharger hors ligne si possible</strong> — les tuiles se chargent plus vite en cache ; anticipez dans les zones à faible signal.</li>
+            <li><strong>Exporter et partager</strong> — après avoir ajusté un itinéraire, exportez un nouveau fichier GPX ; consultez notre
+              <a href="how-to-create-gpx-cycling-routes.html">guide de création d'itinéraires vélo</a> pour les détails.</li>
+          </ul>
+
+          <h2>Pourquoi GPX Viewer pour l'affichage cartographique</h2>
+          <p>
+            GPX Viewer est conçu spécifiquement pour l'expérience de
+            <strong>carte d'itinéraire GPX</strong> : import rapide, rendu cartographique propre, profils
+            d'altitude et position en direct optionnelle sur iOS et Android.
+          </p>
+          <p>
+            Que vous prévisualisiez une randonnée du week-end ou que vous passiez en revue un parcours
+            de cyclosportive, l'objectif est le même : voir l'itinéraire clairement, comprendre le terrain
+            et naviguer en toute confiance.
+          </p>
+
+          <div class="article-cta">
+            <h2>Essayez GPX Viewer gratuitement</h2>
+            <p>Affichez des itinéraires GPX sur des cartes interactives avec profils d'altitude sur iPhone et Android.</p>
+            <div class="store-badges">
+              <a class="store-badge app-store-link" href="#" data-location="article_cta">
+                <img src="../../images/app-store-badge-white.svg" alt="Télécharger sur l'App Store" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="article_cta">
+                <img src="../../images/google-play-badge.png" alt="Disponible sur Google Play" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="article-nav">
+            <a href="../blog/">← Retour à tous les guides</a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="../../images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> Streiv · GPX Viewer
+        </span>
+        <div class="footer-links">
+          <a href="../">Accueil</a>
+          <a href="../privacy.html">Confidentialité</a>
+          <a id="footer-contact" href="mailto:lucas@streiv.app">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/site.js"></script>
+  </body>
+</html>

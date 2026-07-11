@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy — GPX Viewer</title>
+    <title>Informativa sulla privacy — GPX Viewer</title>
     <meta
       name="description"
-      content="Privacy policy for GPX Viewer by Streiv. Learn how we handle app data, location, analytics, and purchases."
+      content="Informativa sulla privacy di GPX Viewer di Streiv. Scopri come gestiamo i dati dell'app, la posizione, le analisi e gli acquisti."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://gpxviewerapp.com/privacy.html" />
+    <link rel="canonical" href="https://gpxviewerapp.com/it/privacy.html" />
     <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/privacy.html" />
     <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/privacy.html" />
     <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/privacy.html" />
@@ -18,70 +18,72 @@
     <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/privacy.html" />
     <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/privacy.html" />
     <meta name="theme-color" content="#14388c" />
-    <link rel="icon" href="images/app-icon.png" type="image/png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/lang.css" />
-    <script src="js/config.js"></script>
-    <script src="js/seo.js"></script>
-    <script src="js/analytics.js"></script>
+    <link rel="icon" href="../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/lang.css" />
+    <script src="../js/config.js"></script>
+    <script src="../js/seo.js"></script>
+    <script src="../js/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="index.html">
-          <img class="brand-logo" src="images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+        <a class="brand" href="/it/">
+          <img class="brand-logo" src="../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
           <span>GPX Viewer</span>
         </a>
-        <div data-lang-switcher></div>
+        <nav class="nav-links">
+          <div data-lang-switcher></div>
+        </nav>
       </div>
     </header>
 
     <div class="page-header">
       <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: March 2026</p>
+        <h1>Informativa sulla privacy</h1>
+        <p>Ultimo aggiornamento: marzo 2026</p>
       </div>
     </div>
 
     <main class="legal-content">
       <div class="container" style="max-width: 720px;">
         <article class="faq-item" style="margin-bottom: 12px;">
-          <h3>Overview</h3>
+          <h3>Panoramica</h3>
           <p>
-            GPX Viewer (“the app”) is developed by Streiv. This policy explains what information the
-            app and website collect and how it is used.
+            GPX Viewer («l'app») è sviluppata da Streiv. Questa informativa spiega quali informazioni
+            l'app e il sito web raccolgono e come vengono utilizzate.
           </p>
         </article>
 
         <article class="faq-item" style="margin-bottom: 12px;">
-          <h3>App data</h3>
+          <h3>Dati dell'app</h3>
           <p>
-            Routes and GPX files you import stay on your device unless you choose to export or
-            share them. Location data is used only when you enable location features to show your
-            position on the map.
+            I percorsi e i file GPX che importi restano sul tuo dispositivo, a meno che tu non
+            scelga di esportarli o condividerli. I dati di posizione vengono utilizzati solo quando
+            attivi le funzionalità di localizzazione per mostrare la tua posizione sulla mappa.
           </p>
         </article>
 
         <article class="faq-item" style="margin-bottom: 12px;">
-          <h3>Analytics</h3>
+          <h3>Analisi</h3>
           <p>
-            The app and website use Google Analytics / Firebase Analytics to understand usage and
-            improve the product. Analytics data is aggregated and does not include the contents of
-            your GPX files.
+            L'app e il sito web utilizzano Google Analytics / Firebase Analytics per comprendere
+            l'utilizzo e migliorare il prodotto. I dati analitici sono aggregati e non includono
+            il contenuto dei tuoi file GPX.
           </p>
         </article>
 
         <article class="faq-item" style="margin-bottom: 12px;">
-          <h3>Purchases</h3>
+          <h3>Acquisti</h3>
           <p>
-            In-app purchases are processed by Apple and Google. We do not receive your payment card details.
+            Gli acquisti in-app sono elaborati da Apple e Google. Non riceviamo i dati della tua carta di credito.
           </p>
         </article>
 
         <article class="faq-item">
-          <h3>Contact</h3>
+          <h3>Contatti</h3>
           <p>
-            Questions about privacy?
+            Domande sulla privacy?
             <a id="privacy-contact" href="mailto:lucas@streiv.app">lucas@streiv.app</a>
           </p>
         </article>
@@ -91,16 +93,18 @@
     <footer class="site-footer">
       <div class="container">
         <span class="footer-brand">
-          <img src="images/app-icon.png" alt="" width="28" height="28" />
+          <img src="../images/app-icon.png" alt="" width="28" height="28" />
           © <span id="year"></span> Streiv · GPX Viewer
         </span>
         <div class="footer-links">
-          <a href="index.html">Home</a>
+          <a href="/it/">Home</a>
           <a href="blog/">Blog</a>
         </div>
       </div>
     </footer>
 
+    <script src="../js/languages.js"></script>
+    <script src="../js/lang-switcher.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
       const email = (window.GPX_SITE_CONFIG && window.GPX_SITE_CONFIG.contactEmail) || "lucas@streiv.app";
@@ -110,7 +114,5 @@
         link.textContent = email;
       }
     </script>
-    <script src="js/languages.js"></script>
-    <script src="js/lang-switcher.js"></script>
   </body>
 </html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Qué es un archivo GPX? Guía completa del formato GPS Exchange</title>
+    <meta
+      name="description"
+      content="Descubre qué es un archivo GPX, cómo funciona el formato GPS Exchange y por qué senderistas y ciclistas usan tracks .gpx para compartir rutas, registrar salidas y navegar al aire libre."
+    />
+    <meta
+      name="keywords"
+      content="qué es un archivo gpx, formato gpx, gps exchange format, track gpx, ruta gpx"
+    />
+    <link rel="canonical" href="https://gpxviewerapp.com/es/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="fr" href="https://gpxviewerapp.com/fr/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="it" href="https://gpxviewerapp.com/it/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="pt" href="https://gpxviewerapp.com/pt/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="es" href="https://gpxviewerapp.com/es/blog/what-is-a-gpx-file.html" />
+    <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/es/blog/what-is-a-gpx-file.html" />
+    <meta property="og:title" content="¿Qué es un archivo GPX? Guía completa del formato GPS Exchange" />
+    <meta
+      property="og:description"
+      content="Descubre qué es un archivo GPX, cómo funciona el formato GPS Exchange y por qué senderistas y ciclistas usan tracks .gpx para compartir rutas y navegar al aire libre."
+    />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="../../images/app-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/lang.css" />
+    <script src="../../js/config.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/analytics.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "¿Qué es un archivo GPX? Guía completa para senderistas y ciclistas",
+        "datePublished": "2026-07-11",
+        "inLanguage": "es",
+        "author": {
+          "@type": "Person",
+          "name": "Streiv"
+        },
+        "image": "https://gpxviewerapp.com/images/og-image.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Streiv",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gpxviewerapp.com/images/app-icon.png"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../">
+          <img class="brand-logo" src="../../images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
+          <span>GPX Viewer</span>
+        </a>
+        <nav class="nav-links">
+          <nav class="lang-switcher" aria-label="Idioma">
+            <a href="/blog/what-is-a-gpx-file.html" hreflang="en">EN</a>
+            <a href="/de/blog/what-is-a-gpx-file.html" hreflang="de">DE</a>
+            <a href="/fr/blog/what-is-a-gpx-file.html" hreflang="fr">FR</a>
+            <a href="/it/blog/what-is-a-gpx-file.html" hreflang="it">IT</a>
+            <a href="/pt/blog/what-is-a-gpx-file.html" hreflang="pt">PT</a>
+            <a href="/es/blog/what-is-a-gpx-file.html" hreflang="es" class="is-active">ES</a>
+          </nav>
+          <a href="../#features">Funciones</a>
+          <a href="../blog/">Blog</a>
+          <a href="../#pricing">Pro</a>
+          <div class="store-badges store-badges--header">
+            <a class="store-badge app-store-link" href="#" data-location="header">
+              <img src="../../images/app-store-badge.svg" alt="Descargar en App Store" />
+            </a>
+            <a class="store-badge play-store-link" href="#" data-location="header">
+              <img src="../../images/google-play-badge.png" alt="Disponible en Google Play" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>¿Qué es un archivo GPX? Guía completa para senderistas y ciclistas</h1>
+        <p>Entiende el formato GPS Exchange y por qué los archivos .gpx impulsan la navegación outdoor.</p>
+      </div>
+    </div>
+
+    <main class="article-page">
+      <div class="container article-layout">
+        <article class="article-content">
+          <p class="article-meta"><time datetime="2026-07-11">11 de julio de 2026</time> · Streiv</p>
+
+          <p>
+            Si alguna vez has descargado un sendero, recibido una ruta de ciclismo de un amigo o
+            exportado una grabación GPS de un teléfono o reloj, casi seguro te has encontrado con un
+            <strong>archivo GPX</strong>. La extensión <code>.gpx</code> significa
+            <strong>GPS Exchange Format</strong> — un estándar abierto que permite a dispositivos y
+            apps compartir datos de ubicación de forma que cualquier herramienta compatible pueda leerlos.
+          </p>
+          <p>
+            A diferencia de formatos de mapa propietarios ligados a una marca, el formato de archivo
+            GPX tiene amplio soporte en teléfonos y dispositivos. Esa portabilidad es exactamente la
+            razón por la que senderistas, ciclistas y corredores de trail lo usan cada día.
+          </p>
+
+          <h2>¿Qué contiene un archivo GPX?</h2>
+          <p>
+            En esencia, un archivo GPX es un documento XML que almacena coordenadas geográficas junto
+            con metadatos opcionales. La mayoría de archivos incluyen uno o más de estos elementos:
+          </p>
+          <ul>
+            <li><strong>Tracks</strong> — un camino continuo de puntos GPS, a menudo registrado durante una caminata o salida en bici.</li>
+            <li><strong>Rutas</strong> — un camino planificado con giros clave, útil para navegación paso a paso.</li>
+            <li><strong>Waypoints</strong> — puntos individuales de interés como cumbres, campamentos o aparcamientos.</li>
+            <li><strong>Datos de elevación</strong> — altura sobre el nivel del mar en cada punto, usada para perfiles de desnivel.</li>
+            <li><strong>Marcas de tiempo</strong> — cuándo se registró cada punto, útil para análisis de ritmo.</li>
+          </ul>
+          <p>
+            Como el formato es de texto y legible, puedes abrir un archivo GPX pequeño en cualquier
+            editor de texto y ver latitud, longitud y valores de elevación línea a línea. Para el uso
+            diario, sin embargo, una app dedicada como
+            <a href="../">GPX Viewer</a> convierte esos datos en bruto en un mapa interactivo.
+          </p>
+
+          <h2>Tracks GPX vs. rutas GPX</h2>
+          <p>
+            La gente suele usar los términos indistintamente, pero hay una distinción útil. Un
+            <strong>track</strong> es normalmente algo que ya has recorrido — tu teléfono o reloj
+            registró cada posición GPS en el camino. Una <strong>ruta</strong> suele planificarse con
+            antelación, conectando waypoints que representan por dónde pretendes ir.
+          </p>
+          <h3>Cuándo usan tracks GPX los senderistas</h3>
+          <p>
+            Asociaciones de senderos, guías y compañeros de ruta comparten tracks GPX para que puedas
+            seguir un camino establecido por bosques, terreno alpino o paseos costeros. Cargar el
+            archivo en el teléfono te da una referencia visual incluso cuando las marcas del sendero
+            son escasas. Nuestra guía sobre el
+            <a href="best-gpx-viewer-for-hiking.html">mejor visor GPX para senderismo</a> explica
+            qué buscar al seguir senderos en el terreno.
+          </p>
+          <h3>Cuándo usan rutas GPX los ciclistas</h3>
+          <p>
+            Los ciclistas planifican bucles, marchas y aventuras gravel como rutas GPX y luego las
+            cargan en el teléfono o en un ciclocomputador. Si quieres crear las tuyas, lee
+            <a href="how-to-create-gpx-cycling-routes.html">cómo crear rutas GPX de ciclismo</a>
+            para un flujo de trabajo paso a paso.
+          </p>
+
+          <h2>Por qué el formato GPX se convirtió en el estándar</h2>
+          <p>
+            Antes de GPX, compartir datos GPS entre marcas era complicado. Cada fabricante usaba su
+            propio formato binario y convertir archivos requería software especial. El GPS Exchange
+            Format lo resolvió publicando un esquema XML abierto que cualquiera podía implementar.
+          </p>
+          <p>
+            Como GPX es un estándar abierto, un archivo que recibes por correo puede abrirse
+            directamente en <a href="../">GPX Viewer</a> en el teléfono — sin paso de conversión.
+          </p>
+
+          <h2>Cómo abrir y visualizar un archivo GPX</h2>
+          <p>
+            La forma más sencilla de ver un archivo GPX en el teléfono es con
+            <a href="../">GPX Viewer</a>. Consulta nuestra guía detallada sobre
+            <a href="how-to-open-gpx-files-on-iphone.html">cómo abrir archivos GPX en iPhone y Android</a>
+            para métodos de importación desde Mail, Archivos y Safari.
+          </p>
+          <p>
+            Una vez importado, querrás una vista de mapa clara con distancia, elevación y etiquetas
+            de waypoints. Ahí es donde
+            <a href="how-to-view-gpx-on-a-map.html">ver GPX en un mapa</a> se vuelve esencial —
+            un buen visor convierte las coordenadas en algo que puedes seguir en el terreno.
+          </p>
+
+          <h2>Qué buscar en una app visor GPX</h2>
+          <p>
+            GPX Viewer está pensada específicamente para navegación outdoor. Estas funciones son las
+            más importantes:
+          </p>
+          <ul>
+            <li><strong>Importación rápida</strong> — comparte un archivo directamente desde Mail o Archivos sin sincronizar con el ordenador.</li>
+            <li><strong>Varios estilos de mapa</strong> — vistas estándar, satélite e híbridas para distintos terrenos.</li>
+            <li><strong>Perfil de elevación</strong> — ve subidas y bajadas antes de salir.</li>
+            <li><strong>Ubicación en tiempo real</strong> — compara tu posición en tiempo real con el track (disponible con GPX Viewer Pro).</li>
+            <li><strong>Creación de rutas</strong> — planifica nuevos tracks y expórtalos como archivos GPX nuevos.</li>
+          </ul>
+          <p>
+            <a href="../">GPX Viewer</a> cubre todo esto en iOS y Android. Descárgala gratis para
+            importar y explorar rutas en un mapa. Actualiza a Pro para seguimiento de ubicación en
+            tiempo real y ver exactamente dónde estás respecto al sendero.
+          </p>
+
+          <h2>Preguntas frecuentes sobre archivos GPX</h2>
+          <h3>¿GPX es lo mismo que KML?</h3>
+          <p>
+            No. KML es un formato de mapa distinto. GPX es la opción preferida para navegación GPS
+            y seguimiento de rutas outdoor. GPX Viewer abre archivos .gpx directamente en iPhone y Android.
+          </p>
+          <h3>¿Qué tamaño tienen los archivos GPX?</h3>
+          <p>
+            Una caminata corta por el barrio puede generar un archivo de 50 KB, mientras que una
+            travesía de varios días con muestreo GPS frecuente puede alcanzar varios megabytes. Los
+            datos de elevación y marcas de tiempo añaden tamaño, pero incluso archivos grandes se
+            abren rápido en apps móviles modernas.
+          </p>
+          <h3>¿Puedo editar un archivo GPX?</h3>
+          <p>
+            Sí. En GPX Viewer puedes crear rutas desde cero, editar waypoints y exportarlos como
+            nuevos archivos .gpx para compartir con amigos o abrir más tarde.
+          </p>
+
+          <div class="article-cta">
+            <h2>Prueba GPX Viewer gratis</h2>
+            <p>Importa archivos GPX, visualiza rutas en un mapa y explora perfiles de elevación en iPhone y Android.</p>
+            <div class="store-badges">
+              <a class="store-badge app-store-link" href="#" data-location="article_cta">
+                <img src="../../images/app-store-badge-white.svg" alt="Descargar en App Store" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="article_cta">
+                <img src="../../images/google-play-badge.png" alt="Disponible en Google Play" />
+              </a>
+            </div>
+          </div>
+
+          <nav class="article-nav">
+            <a href="../blog/">← Volver a todas las guías</a>
+          </nav>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-brand">
+          <img src="../../images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> Streiv · GPX Viewer
+        </span>
+        <div class="footer-links">
+          <a href="../">Inicio</a>
+          <a href="../privacy.html">Privacidad</a>
+          <a id="footer-contact" href="mailto:lucas@streiv.app">Contacto</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/site.js"></script>
+  </body>
+</html>
