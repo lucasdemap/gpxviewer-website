@@ -1,0 +1,147 @@
+
+/* Blog */
+
+.blog-index {
+  padding: 48px 0 72px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.blog-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 0.5px solid rgba(60, 60, 67, 0.08);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.blog-card h2 a:hover {
+  color: var(--blue);
+}
+
+.blog-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  flex: 1;
+}
+
+.blog-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.blog-read-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.article-page {
+  padding: 40px 0 72px;
+}
+
+.article-layout {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+}
+
+.article-content h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 36px 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.article-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.article-content p,
+.article-content li {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 22px;
+  margin: 12px 0;
+}
+
+.article-content li + li {
+  margin-top: 8px;
+}
+
+.article-content a {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.article-cta {
+  margin-top: 40px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  text-align: center;
+}
+
+.article-cta h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  color: white;
+}
+
+.article-cta p {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+}
+
+.article-cta .store-badges {
+  justify-content: center;
+}
+
+.article-nav {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 0.5px solid rgba(60, 60, 67, 0.12);
+}
+
+.article-nav a {
+  color: var(--blue);
+  font-weight: 600;
+}
