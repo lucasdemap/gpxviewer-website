@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GPX Viewer — View & Navigate GPX Routes on iPhone & Android</title>
+    <title>GPX Viewer — View & Navigate GPX Routes</title>
     <meta
       name="description"
       content="GPX Viewer is the simple way to open GPX files, view routes on a map, track your location, create custom routes, and export tracks on iPhone and Android."
     />
-    <meta name="theme-color" content="#2563eb" />
+    <meta name="theme-color" content="#14388c" />
+    <link rel="icon" href="images/app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/app-icon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/config.js"></script>
     <script src="js/analytics.js"></script>
@@ -17,7 +19,7 @@
     <header class="site-header">
       <div class="container">
         <a class="brand" href="/">
-          <span class="brand-mark">⌖</span>
+          <img class="brand-logo" src="images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
           <span>GPX Viewer</span>
         </a>
         <nav class="nav-links">
@@ -36,11 +38,21 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
+            <div class="hero-intro">
+              <img class="hero-app-icon" src="images/app-icon.png" alt="GPX Viewer app icon" width="72" height="72" />
+              <div>
+                <p class="hero-app-name">GPX Viewer</p>
+                <div class="hero-rating">
+                  <span class="hero-stars" aria-hidden="true">★★★★★</span>
+                  <span>4.4 on the App Store</span>
+                </div>
+              </div>
+            </div>
             <span class="hero-badge">Built for hikers, cyclists & explorers</span>
-            <h1>The easiest way to view GPX files on a map.</h1>
+            <h1>View GPX routes on a map. Navigate with confidence.</h1>
             <p>
-              Open GPX routes from Files, Mail, or Safari. See waypoints, elevation, and your live
-              location while you navigate trails and rides.
+              Open GPX files from Files, Mail, or Safari. Follow trails and rides with elevation
+              charts, live location, and maps that feel just like the app.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary app-store-link" href="#" data-location="hero_primary">Download on the App Store</a>
@@ -51,9 +63,18 @@
 
           <div class="phone-card">
             <div class="phone-screen" aria-hidden="true">
-              <div class="map-grid"></div>
-              <div class="route-line"></div>
-              <div class="puck"></div>
+              <div class="phone-status">Routes</div>
+              <div class="phone-map">
+                <div class="map-grid"></div>
+                <div class="route-line"></div>
+                <div class="puck"></div>
+              </div>
+              <div class="phone-tabbar">
+                <div class="tab-item active"><span class="tab-icon"></span>Routes</div>
+                <div class="tab-item"><span class="tab-icon"></span>Map</div>
+                <div class="tab-item"><span class="tab-icon"></span>Create</div>
+                <div class="tab-item"><span class="tab-icon"></span>Settings</div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,32 +90,44 @@
 
           <div class="features">
             <article class="feature-card">
-              <div class="feature-icon">🗺️</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </div>
               <h3>View GPX files on a map</h3>
               <p>Open .gpx files and instantly see your route, waypoints, and elevation data.</p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon">📍</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0013 3.06V1h-2v2.06A8.994 8.994 0 003.06 11H1v2h2.06A8.994 8.994 0 0011 20.94V23h2v-2.06A8.994 8.994 0 0020.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+              </div>
               <h3>Live location with Pro</h3>
               <p>See your real-time position on the map with heading while you follow a route.</p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon">➕</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </div>
               <h3>Create & save routes</h3>
               <p>Plan custom routes, save them, and export GPX files to share or reuse.</p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon">⛰️</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99l1.5 1.5z"/></svg>
+              </div>
               <h3>Elevation charts</h3>
               <p>Understand climbs and descents before you head out.</p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon">🚴</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm14.5 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM12 5.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM8.5 12c-.83 0-1.5.67-1.5 1.5S7.67 15 8.5 15 10 14.33 10 13.5 9.33 12 8.5 12zm7 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM12 16c-1.5 0-2.85.75-3.66 1.91l1.43 1.43A3.98 3.98 0 0112 18c1.05 0 2.01.4 2.73 1.05l1.43-1.43A5.978 5.978 0 0012 16z"/></svg>
+              </div>
               <h3>Cycling routes</h3>
               <p>Switch to cycling mode for rides and bike-friendly route planning.</p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon">↔️</div>
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"/></svg>
+              </div>
               <h3>Import & export</h3>
               <p>Bring routes in from other apps and export your tracks as GPX files.</p>
             </article>
@@ -112,8 +145,8 @@
             </p>
           </div>
           <article class="pricing-card">
-            <h3>Lifetime Pro</h3>
-            <p class="price-tag">One-time payment</p>
+            <h3>Unlock GPX Pro</h3>
+            <p class="price-tag">One-time payment · yours forever</p>
             <ul>
               <li>See your own location on the map</li>
               <li>Create and save custom routes</li>
@@ -122,8 +155,8 @@
               <li>Restore purchases anytime</li>
             </ul>
             <p style="margin-top: 20px;" class="store-buttons">
-              <a class="btn btn-primary app-store-link" href="#" data-location="pricing">Get on App Store</a>
-              <a class="btn btn-outline play-store-link" href="#" data-location="pricing">Get on Google Play</a>
+              <a class="btn btn-outline app-store-link" href="#" data-location="pricing">Get on App Store</a>
+              <a class="btn btn-secondary play-store-link" href="#" data-location="pricing">Get on Google Play</a>
             </p>
           </article>
         </div>
@@ -159,13 +192,16 @@
       <section class="cta-band">
         <div class="container">
           <div class="cta-inner">
-            <div>
-              <h2>Ready to explore your next route?</h2>
-              <p>Download GPX Viewer and open your first GPX file in seconds.</p>
+            <div class="cta-brand">
+              <img src="images/app-icon.png" alt="" width="56" height="56" />
+              <div>
+                <h2>Ready to explore your next route?</h2>
+                <p>Download GPX Viewer and open your first GPX file in seconds.</p>
+              </div>
             </div>
             <div class="store-buttons">
               <a class="btn btn-primary app-store-link" href="#" data-location="footer_cta">Download for iPhone</a>
-              <a class="btn btn-outline play-store-link" href="#" data-location="footer_cta">Download for Android</a>
+              <a class="btn btn-secondary play-store-link" href="#" data-location="footer_cta">Download for Android</a>
             </div>
           </div>
         </div>
@@ -174,7 +210,10 @@
 
     <footer class="site-footer">
       <div class="container">
-        <span>© <span id="year"></span> Streiv · GPX Viewer</span>
+        <span class="footer-brand">
+          <img src="images/app-icon.png" alt="" width="28" height="28" />
+          © <span id="year"></span> Streiv · GPX Viewer
+        </span>
         <div class="footer-links">
           <a href="privacy.html">Privacy</a>
           <a id="footer-contact" href="mailto:lucas@streiv.app">Contact</a>
