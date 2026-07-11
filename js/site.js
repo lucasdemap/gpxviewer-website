@@ -1,6 +1,7 @@
 (function () {
   const config = window.GPX_SITE_CONFIG || {};
   const appStoreUrl = config.appStoreUrl || "#";
+  const playStoreUrl = config.playStoreUrl || "#";
   const contactEmail = config.contactEmail || "lucas@streiv.app";
 
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -16,14 +17,20 @@
     footerContact.href = contactHref;
   }
 
-  document.querySelectorAll(".app-store-link").forEach(function (link) {
-    link.href = appStoreUrl;
-    link.addEventListener("click", function () {
-      if (typeof window.trackEvent === "function") {
-        window.trackEvent("app_store_click", {
-          link_location: link.dataset.location || "unknown",
-        });
-      }
+  function wireStoreLinks(selector, url, store) {
+    document.querySelectorAll(selector).forEach(function (link) {
+      link.href = url;
+      link.addEventListener("click", function () {
+        if (typeof window.trackEvent === "function") {
+          window.trackEvent("app_store_click", {
+            link_location: link.dataset.location || "unknown",
+            store: store,
+          });
+        }
+      });
     });
-  });
+  }
+
+  wireStoreLinks(".app-store-link", appStoreUrl, "app_store");
+  wireStoreLinks(".play-store-link", playStoreUrl, "play_store");
 })();

@@ -16,7 +16,7 @@ Use the **same Firebase project** as the iOS app (`gpx-reader-e5ba6`):
 gaMeasurementId: "G-XXXXXXXXXX",
 ```
 
-6. Also add your App Store URL in `js/config.js`
+6. Add your App Store and Google Play URLs in `js/config.js`
 
 Web and app analytics will appear in the **same GA4 property**, so you can compare app vs website traffic.
 
@@ -42,14 +42,15 @@ The live site repo is **public and website-only**:
 
 **https://github.com/lucasdemap/gpxviewer-website**
 
-The iOS app stays local — it is not on GitHub.
+Local clone: **`~/Desktop/gpxviewer-website`** — edit there and push to deploy.
+
+The iOS app stays in the NavigationGPX project and is not on GitHub.
 
 ### GitHub Pages
 
-1. Edit files in this `website/` folder locally
-2. Copy changes into the `gpxviewer-website` repo and push to `main`
-3. GitHub Actions deploys automatically
-4. Custom domain is set in `CNAME` (`gpxviewerapp.com`). DNS at your registrar:
+1. Edit files in `~/Desktop/gpxviewer-website`
+2. Push to `main` on GitHub — deploy runs automatically
+3. Custom domain is set in `CNAME` (`gpxviewerapp.com`). DNS at your registrar:
 
    | Type | Name | Value |
    |------|------|-------|
@@ -59,7 +60,7 @@ The iOS app stays local — it is not on GitHub.
    | A | `@` | `185.199.111.153` |
    | CNAME | `www` | `lucasdemap.github.io` |
 
-5. In GitHub **Settings → Pages**, enable **Enforce HTTPS**
+4. In GitHub **Settings → Pages**, enable **Enforce HTTPS**
 
 Your site will be live at `https://gpxviewerapp.com` (or `https://<user>.github.io/<repo>/` until DNS propagates).
 
@@ -71,6 +72,6 @@ Upload the `website/` folder to Netlify, Vercel, or Cloudflare Pages if you pref
 
 - `index.html` — landing page
 - `privacy.html` — privacy policy (App Store / website)
-- `js/config.js` — GA ID, App Store URL, contact email
+- `js/config.js` — GA ID, App Store & Play Store URLs, contact email
 - `js/analytics.js` — GA4 loader
-- `js/site.js` — App Store links + click tracking
+- `js/site.js` — store links + click tracking
