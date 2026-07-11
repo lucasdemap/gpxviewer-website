@@ -3,17 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GPX Viewer — View & Navigate GPX Routes</title>
+    <title>GPX Viewer — View & Navigate GPX Routes on iPhone & Android</title>
     <meta
       name="description"
-      content="GPX Viewer is the simple way to open GPX files, view routes on a map, track your location, create custom routes, and export tracks on iPhone and Android."
+      content="GPX Viewer lets you open GPX files, view hiking and cycling routes on a map, track your live location, create custom routes, and export tracks. Free on iOS and Android."
     />
+    <meta
+      name="keywords"
+      content="GPX viewer, GPX file, GPX map, hiking app, cycling routes, GPS track, route navigation, GPX reader, outdoor navigation"
+    />
+    <meta name="author" content="Streiv" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://gpxviewerapp.com/" />
     <meta name="theme-color" content="#14388c" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GPX Viewer" />
+    <meta property="og:url" content="https://gpxviewerapp.com/" />
+    <meta property="og:title" content="GPX Viewer — View & Navigate GPX Routes" />
+    <meta
+      property="og:description"
+      content="Open GPX files on a map. Follow hiking and cycling routes with elevation charts and live location. Download free on iPhone and Android."
+    />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GPX Viewer — View & Navigate GPX Routes" />
+    <meta
+      name="twitter:description"
+      content="Open GPX files on a map. Follow hiking and cycling routes with elevation charts and live location."
+    />
+    <meta name="twitter:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+
     <link rel="icon" href="images/app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/app-icon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/config.js"></script>
+    <script src="js/seo.js"></script>
     <script src="js/analytics.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://gpxviewerapp.com/#website",
+            "url": "https://gpxviewerapp.com/",
+            "name": "GPX Viewer",
+            "description": "View and navigate GPX routes on a map for hiking and cycling.",
+            "publisher": { "@id": "https://gpxviewerapp.com/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://gpxviewerapp.com/#organization",
+            "name": "Streiv",
+            "url": "https://gpxviewerapp.com/",
+            "logo": "https://gpxviewerapp.com/images/app-icon.png",
+            "email": "lucas@streiv.app"
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "GPX Viewer",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "NavigationApplication",
+            "description": "Import GPX files, view routes on interactive maps, track your location, and create custom hiking and cycling routes.",
+            "image": "https://gpxviewerapp.com/images/app-screenshot.jpg",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.4",
+              "ratingCount": "56"
+            },
+            "downloadUrl": [
+              "https://apps.apple.com/us/app/gpx-viewer-map/id6453594386",
+              "https://play.google.com/store/apps/details?id=com.gpxviewer.android"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What file types are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "GPX Viewer works with .gpx files — the standard format for GPS routes and tracks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is there a subscription?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. GPX Viewer Pro is a one-time purchase. Buy once, keep forever."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I open GPX files from other apps?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Share a GPX file to GPX Viewer from Files, Mail, Safari, and other apps."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -23,6 +127,7 @@
           <span>GPX Viewer</span>
         </a>
         <nav class="nav-links">
+          <a href="#screenshots">Screenshots</a>
           <a href="#features">Features</a>
           <a href="#pricing">Pro</a>
           <a href="#faq">FAQ</a>
@@ -72,20 +177,56 @@
           </div>
 
           <div class="phone-card">
-            <div class="phone-screen" aria-hidden="true">
-              <div class="phone-status">Routes</div>
-              <div class="phone-map">
-                <div class="map-grid"></div>
-                <div class="route-line"></div>
-                <div class="puck"></div>
-              </div>
-              <div class="phone-tabbar">
-                <div class="tab-item active"><span class="tab-icon"></span>Routes</div>
-                <div class="tab-item"><span class="tab-icon"></span>Map</div>
-                <div class="tab-item"><span class="tab-icon"></span>Create</div>
-                <div class="tab-item"><span class="tab-icon"></span>Settings</div>
-              </div>
+            <div class="phone-device">
+              <img
+                src="images/app-screenshot.jpg"
+                alt="GPX Viewer app showing a hiking route on a map with elevation profile"
+                width="390"
+                height="844"
+                loading="eager"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-screenshots" id="screenshots">
+        <div class="container">
+          <h2>See GPX Viewer in action</h2>
+          <p class="section-intro">
+            View routes on the map, check elevation, and navigate trails and rides — all from your phone.
+          </p>
+          <div class="screenshot-gallery">
+            <figure class="screenshot-item">
+              <img
+                src="images/app-screenshot.jpg"
+                alt="GPX Viewer map view with route track and waypoints"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+              <figcaption>Map & route view</figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <img
+                src="images/app-screenshot-2.jpg"
+                alt="GPX Viewer route list and navigation features"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+              <figcaption>Routes & navigation</figcaption>
+            </figure>
+            <figure class="screenshot-item">
+              <img
+                src="images/app-screenshot-3.jpg"
+                alt="GPX Viewer elevation chart and route details"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+              <figcaption>Elevation & details</figcaption>
+            </figure>
           </div>
         </div>
       </section>

@@ -25,7 +25,55 @@ Web and app analytics will appear in the **same GA4 property**, so you can compa
 | Event | When |
 |-------|------|
 | `page_view` | Automatic |
-| `app_store_click` | User taps a Download button (`link_location` param) |
+| `app_store_click` | User taps a store badge (`link_location`, `store` params) |
+
+## Google Search Console
+
+Connect Search Console so Google indexes **gpxviewerapp.com** and shows search performance.
+
+### Option A — Verify with Google Analytics (easiest)
+
+Your site already has GA4 (`G-MWGRHGCMJ8`). Use the **same Google account** that owns the Firebase/GA property.
+
+1. Open [Google Search Console](https://search.google.com/search-console)
+2. **Add property** → URL prefix → `https://gpxviewerapp.com`
+3. Choose **Google Analytics** as the verification method
+4. Click **Verify**
+
+### Option B — HTML meta tag
+
+1. In Search Console, choose **HTML tag** verification
+2. Copy the `content` value from the meta tag (the long token string)
+3. Paste it in `js/config.js`:
+
+```js
+searchConsoleVerification: "your-token-here",
+```
+
+4. Push to GitHub, then click **Verify** in Search Console
+
+### Submit your sitemap
+
+After verification:
+
+1. Search Console → **Sitemaps**
+2. Enter: `sitemap.xml`
+3. Click **Submit**
+
+Your full sitemap URL: **https://gpxviewerapp.com/sitemap.xml**
+
+### Link Search Console to GA4
+
+1. [Google Analytics](https://analytics.google.com/) → **Admin** → **Product links**
+2. **Search Console links** → Link → select your property and `gpxviewerapp.com`
+
+## SEO included on the site
+
+- `robots.txt` and `sitemap.xml`
+- Canonical URLs, Open Graph, and Twitter cards
+- JSON-LD structured data (app, organization, FAQ)
+- `og-image.jpg` for social previews
+- Real app screenshots in hero and gallery
 
 ## Local preview
 
@@ -72,6 +120,10 @@ Upload the `website/` folder to Netlify, Vercel, or Cloudflare Pages if you pref
 
 - `index.html` — landing page
 - `privacy.html` — privacy policy (App Store / website)
-- `js/config.js` — GA ID, App Store & Play Store URLs, contact email
+- `robots.txt` — crawler rules + sitemap link
+- `sitemap.xml` — pages for Google
+- `js/config.js` — GA ID, store URLs, Search Console token, site URL
+- `js/seo.js` — Search Console meta tag injection
 - `js/analytics.js` — GA4 loader
 - `js/site.js` — store links + click tracking
+- `images/` — app icon, screenshots, store badges, og-image
