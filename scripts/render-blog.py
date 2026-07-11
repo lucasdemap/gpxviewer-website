@@ -29,7 +29,12 @@ LANG_LABELS = {
 }
 
 
-def article_path(locale: str, slug: str) -> str:
+FAVICON_BLOCK = """    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/images/favicon-48x48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/images/favicon-192x192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />"""
+
+
     if locale == "en":
         return f"/blog/{slug}.html"
     return f"/{locale}/blog/{slug}.html"
@@ -114,7 +119,7 @@ def render_article(locale: str, article: dict) -> str:
     <meta property="og:title" content="{title}" />
     <meta property="og:description" content="{desc}" />
     <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
-    <link rel="icon" href="{depth}images/app-icon.png" type="image/png" />
+{FAVICON_BLOCK}
     <link rel="stylesheet" href="{depth}css/style.css" />
     <link rel="stylesheet" href="{depth}css/lang.css?v=5" />
     <link rel="stylesheet" href="{depth}css/blog.css" />
@@ -272,7 +277,7 @@ def render_blog_index(locale: str, articles: list, index_t: dict) -> str:
     <link rel="canonical" href="{canonical}" />
 {chr(10).join(hreflang_lines)}
     <meta name="theme-color" content="#14388c" />
-    <link rel="icon" href="{depth}images/app-icon.png" type="image/png" />
+{FAVICON_BLOCK}
     <link rel="stylesheet" href="{depth}css/style.css" />
     <link rel="stylesheet" href="{depth}css/lang.css?v=5" />
     <link rel="stylesheet" href="{depth}css/blog.css" />
