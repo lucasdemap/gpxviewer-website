@@ -89,6 +89,17 @@ img {
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a:not(.btn) {
@@ -661,7 +672,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .nav-links a:not(.btn):not(.store-badge) {
+  .nav-links > a:not(.btn):not(.store-badge) {
     display: none;
   }
 

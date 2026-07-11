@@ -47,7 +47,7 @@
 
     <link rel="icon" href="images/app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/app-icon.png" />
-    <link rel="stylesheet" href="css/style.css?v=2" />
+    <link rel="stylesheet" href="css/style.css?v=3" />
     <link rel="stylesheet" href="css/lang.css" />
     <script src="js/config.js"></script>
     <script src="js/seo.js"></script>
@@ -134,9 +134,17 @@
           <img class="brand-logo" src="images/app-icon.png" alt="GPX Viewer" width="44" height="44" />
           <span>GPX Viewer</span>
         </a>
-        <nav class="nav-links">
-          <div data-lang-switcher></div>
-          <a href="blog/">Blog</a>
+        <div class="header-right">
+          <nav class="lang-switcher" aria-label="Language">
+            <a href="/" hreflang="en" class="is-active">EN</a>
+            <a href="/de/" hreflang="de">DE</a>
+            <a href="/fr/" hreflang="fr">FR</a>
+            <a href="/it/" hreflang="it">IT</a>
+            <a href="/pt/" hreflang="pt">PT</a>
+            <a href="/es/" hreflang="es">ES</a>
+          </nav>
+          <nav class="nav-links">
+            <a href="blog/">Blog</a>
           <a href="#features">Features</a>
           <a href="#pricing">Pro</a>
           <a href="#faq">FAQ</a>
@@ -149,6 +157,7 @@
             </a>
           </div>
         </nav>
+        </div>
       </div>
     </header>
 
