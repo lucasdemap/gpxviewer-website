@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wat is een GPX-bestand? Complete GPS Exchange Format-gids</title>
-    <meta
-      name="description"
-      content="Leer wat een GPX-bestand is, hoe het GPS Exchange Format werkt en waarom wandelaars en fietsers .gpx-tracks gebruiken om routes te delen, ritten op te nemen en buiten te navigeren."
-    />
-    <meta
-      name="keywords"
-      content="wat is een gpx bestand, gpx bestandsformaat, gps exchange format, gpx track, gpx route"
-    />
+    <title>Wat is een GPX-bestand? Volledige gids voor GPS-uitwisselingsformaten</title>
+    <meta name="description" content="Ontdek wat een GPX-bestand is, hoe tracks, routes en waypoints werken en hoe GPX zich verhoudt tot KML, TCX en FIT. Voor wandelaars en fietsers op iPhone en Android." />
+    <meta name="keywords" content="wat is een gpx-bestand, gpx-bestandsformaat, gps-uitwisselingsformaat, gpx versus kml" />
     <link rel="canonical" href="https://gpxviewerapp.com/nl/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/what-is-a-gpx-file.html" />
@@ -23,24 +17,19 @@
     <link rel="alternate" hreflang="pl" href="https://gpxviewerapp.com/pl/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="id" href="https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/nl/blog/what-is-a-gpx-file.html" />
+    <meta property="og:title" content="Wat is een GPX-bestand? Volledige gids voor GPS-uitwisselingsformaten" />
+    <meta property="og:description" content="Ontdek wat een GPX-bestand is, hoe tracks, routes en waypoints werken en hoe GPX zich verhoudt tot KML, TCX en FIT. Voor wandelaars en fietsers op iPhone en Android." />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/images/favicon-48x48.png" type="image/png" sizes="48x48" />
     <link rel="icon" href="/images/favicon-192x192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />
-<meta name="theme-color" content="#14388c" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://gpxviewerapp.com/nl/blog/what-is-a-gpx-file.html" />
-    <meta property="og:title" content="Wat is een GPX-bestand? Complete GPS Exchange Format-gids" />
-    <meta
-      property="og:description"
-      content="Leer wat een GPX-bestand is, hoe het GPS Exchange Format werkt en waarom wandelaars en fietsers .gpx-tracks gebruiken om routes te delen en buiten te navigeren."
-    />
-    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
-    <meta property="og:locale" content="nl_NL" />
-
-    <link rel="stylesheet" href="../../css/style.css?v=3" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/lang.css?v=5" />
-<link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
     <script src="../../js/config.js"></script>
     <script src="../../js/seo.js"></script>
     <script src="../../js/analytics.js"></script>
@@ -48,21 +37,15 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Wat is een GPX-bestand? De complete gids voor wandelaars & fietsers",
-        "datePublished": "2026-07-11",
+        "headline": "Wat is een GPX-bestand?",
+        "datePublished": "2026-09-02",
         "inLanguage": "nl",
-        "author": {
-          "@type": "Person",
-          "name": "GPX Viewer"
-        },
+        "author": { "@type": "Person", "name": "GPX Viewer" },
         "image": "https://gpxviewerapp.com/images/og-image.jpg",
         "publisher": {
           "@type": "Organization",
           "name": "GPX Viewer",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://gpxviewerapp.com/images/app-icon.png"
-          }
+          "logo": { "@type": "ImageObject", "url": "https://gpxviewerapp.com/images/app-icon.png" }
         }
       }
     </script>
@@ -75,11 +58,11 @@
           <span>GPX Viewer</span>
         </a>
         <div class="header-right">
-<nav class="nav-links">
-<a href="/nl/#features">Functies</a>
-          <a href="/nl/blog/">Blog</a>
-          <a href="/nl/#pricing">Pro</a>
-          <details class="lang-dropdown">
+          <nav class="nav-links">
+            <a href="/nl/#features">Functies</a>
+            <a href="/nl/blog/">Blog</a>
+            <a href="/nl/#pricing">Pro</a>
+                      <details class="lang-dropdown">
             <summary aria-label="Taal">NL</summary>
             <div class="lang-dropdown-menu" role="navigation" aria-label="Taal">
               <a href="/blog/what-is-a-gpx-file.html" hreflang="en" title="English">EN</a>
@@ -93,147 +76,62 @@
               <a href="/id/blog/what-is-a-gpx-file.html" hreflang="id" title="Indonesia">ID</a>
             </div>
           </details>
-          <div class="store-badges store-badges--header">
-            <a class="store-badge app-store-link" href="#" data-location="header">
-              <img src="../../images/app-store-badge.svg" alt="Download in de App Store" />
-            </a>
-            <a class="store-badge play-store-link" href="#" data-location="header">
-              <img src="../../images/google-play-badge.png" alt="Downloaden via Google Play" />
-            </a>
-          </div>
-        </nav>
-              </div>
+            <div class="store-badges store-badges--header">
+              <a class="store-badge app-store-link" href="#" data-location="header">
+                <img src="../../images/app-store-badge.svg" alt="Download in de App Store" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="header">
+                <img src="../../images/google-play-badge.png" alt="Downloaden via Google Play" />
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <div class="page-header">
       <div class="container">
-        <h1>Wat is een GPX-bestand? De complete gids voor wandelaars &amp; fietsers</h1>
-        <p>Begrijp het GPS Exchange Format en waarom .gpx-bestanden outdoor-navigatie mogelijk maken.</p>
+        <h1>Wat is een GPX-bestand?</h1>
+        <p>Begrijp het GPS Exchange-formaat en waarom .gpx-bestanden buitennavigatie mogelijk maken.</p>
       </div>
     </div>
 
     <main class="article-page">
       <div class="container article-layout">
         <article class="article-content">
-          <p class="article-meta"><time datetime="2026-07-11">11 juli 2026</time></p>
-
-          <p>
-            Als je ooit een wandelpad hebt gedownload, een fietsroute van een vriend hebt ontvangen of
-            een GPS-opname van je telefoon of horloge hebt geëxporteerd, ben je vrijwel zeker een
-            <strong>GPX-bestand</strong> tegengekomen. De extensie <code>.gpx</code> staat voor
-            <strong>GPS Exchange Format</strong> — een open standaard waarmee apparaten en apps
-            locatiegegevens kunnen delen op een manier die elke compatibele tool kan lezen.
-          </p>
-          <p>
-            In tegenstelling tot propriëtaire kaartformaten die aan één merk zijn gekoppeld, wordt het
-            GPX-bestandsformaat breed ondersteund op telefoons en apparaten. Die
-            overdraagbaarheid is precies waarom wandelaars, fietsers en trailrunners er dagelijks op vertrouwen.
-          </p>
-
-          <h2>Wat bevat een GPX-bestand?</h2>
-          <p>
-            In essentie is een GPX-bestand een XML-document dat geografische coördinaten opslaat, samen
-            met optionele metadata. De meeste bestanden bevatten een of meer van deze elementen:
-          </p>
-          <ul>
-            <li><strong>Tracks</strong> — een continu pad van GPS-punten, vaak opgenomen tijdens een wandeling of rit.</li>
-            <li><strong>Routes</strong> — een gepland pad met belangrijke bochten, handig voor stapsgewijze navigatie.</li>
-            <li><strong>Waypoints</strong> — individuele interessante punten zoals toppen, kampeerplaatsen of parkeerterreinen.</li>
-            <li><strong>Hoogtegegevens</strong> — hoogte boven zeeniveau bij elk punt, gebruikt voor klimprofielen.</li>
-            <li><strong>Tijdstempels</strong> — wanneer elk punt is geregistreerd, nuttig voor tempo-analyse.</li>
-          </ul>
-          <p>
-            Omdat het formaat tekstgebaseerd en leesbaar is, kun je een klein GPX-bestand in
-            elke teksteditor openen en breedte-, lengte- en hoogtewaarden regel voor regel zien.
-            Voor dagelijks gebruik rendert een speciale app zoals
-            <a href="/nl/">GPX Viewer</a> die ruwe gegevens als een interactieve kaart.
-          </p>
-
-          <h2>GPX-tracks vs. GPX-routes</h2>
-          <p>
-            Mensen gebruiken de termen vaak door elkaar, maar er is een nuttig onderscheid. Een
-            <strong>track</strong> is meestal iets dat je al hebt afgelegd — je telefoon of horloge
-            heeft elke GPS-fix onderweg gelogd. Een <strong>route</strong> is meestal van tevoren
-            gepland, met waypoints die aangeven waar je naartoe wilt.
-          </p>
-          <h3>Wanneer wandelaars GPX-tracks gebruiken</h3>
-          <p>
-            Wandelverenigingen, gidsboeken en medewandelaars delen GPX-tracks zodat je een
-            vastgesteld pad kunt volgen door bossen, alpen of kustwandelingen. Het bestand op je
-            telefoon laden geeft je een visuele referentie, zelfs wanneer bewegwijzering schaars is. Onze gids over de
-            <a href="best-gpx-viewer-for-hiking.html">beste GPX-viewer voor wandelen</a> behandelt
-            waar je op moet letten bij het volgen van paden in het veld.
-          </p>
-          <h3>Wanneer fietsers GPX-routes gebruiken</h3>
-          <p>
-            Fietsers plannen lussen, sportieve ritten en gravelavonturen als GPX-routes en laden
-            ze vervolgens op een telefoon of fietscomputer. Wil je er zelf een maken? Lees
-            <a href="how-to-create-gpx-cycling-routes.html">hoe je GPX-fietsroutes maakt</a>
-            voor een stapsgewijze workflow.
-          </p>
-
-          <h2>Waarom het GPX-bestandsformaat de standaard werd</h2>
-          <p>
-            Vóór GPX was het delen van GPS-gegevens tussen merken lastig. Elke fabrikant gebruikte
-            zijn eigen binaire formaat en het converteren van bestanden vereiste speciale software. Het GPS Exchange Format
-            loste dat op door een open XML-schema te publiceren dat iedereen kon implementeren.
-          </p>
-          <p>
-            Omdat GPX een open standaard is, kun je een bestand dat je per e-mail ontvangt direct openen in
-            <a href="/nl/">GPX Viewer</a> op je telefoon — zonder conversiestap.
-          </p>
-
-          <h2>Hoe open en bekijk je een GPX-bestand</h2>
-          <p>
-            De eenvoudigste manier om een GPX-bestand op je telefoon te bekijken is met
-            <a href="/nl/">GPX Viewer</a>. Zie onze gedetailleerde uitleg over
-            <a href="how-to-open-gpx-files-on-iphone.html">GPX-bestanden openen op iPhone en Android</a>
-            voor importmethoden vanuit Mail, Bestanden en Safari.
-          </p>
-          <p>
-            Na import wil je een duidelijke kaartweergave met afstand, hoogte en waypoint-
-            labels. Daar wordt
-            <a href="how-to-view-gpx-on-a-map.html">GPX op een kaart bekijken</a> essentieel —
-            een goede viewer maakt van coördinaten iets dat je daadwerkelijk op de grond kunt volgen.
-          </p>
-
-          <h2>Waar je op moet letten in een GPX-viewer-app</h2>
-          <p>
-            GPX Viewer is specifiek gebouwd voor outdoor-navigatie. Deze functies zijn het belangrijkst:
-          </p>
-          <ul>
-            <li><strong>Snelle import</strong> — deel een bestand direct vanuit Mail of Bestanden zonder desktopsynchronisatie.</li>
-            <li><strong>Meerdere kaartstijlen</strong> — standaard-, satelliet- en hybride weergaven voor verschillend terrein.</li>
-            <li><strong>Hoogteprofiel</strong> — bekijk klimmen en afdalen voordat je vertrekt.</li>
-            <li><strong>Live locatie</strong> — vergelijk je realtimepositie met het spoor (beschikbaar met GPX Viewer Pro).</li>
-            <li><strong>Routecreatie</strong> — plan nieuwe tracks en exporteer ze als verse GPX-bestanden.</li>
-          </ul>
-          <p>
-            <a href="/nl/">GPX Viewer</a> dekt dit allemaal op zowel iOS als Android. Download gratis
-            om routes te importeren en op een kaart te verkennen. Upgrade naar Pro voor live locatie-tracking
-            zodat je precies ziet waar je bent ten opzichte van het pad.
-          </p>
-
-          <h2>Veelgestelde vragen over GPX-bestanden</h2>
-          <h3>Is GPX hetzelfde als KML?</h3>
-          <p>
-            Nee. KML is een ander kaartformaat. GPX is de
-            voorkeurskeuze voor GPS-navigatie en het volgen van outdoor-routes.
-            GPX Viewer opent .gpx-bestanden direct op iPhone en Android.
-          </p>
-          <h3>Hoe groot zijn GPX-bestanden?</h3>
-          <p>
-            Een korte wandeling in de buurt kan een bestand van 50 KB opleveren, terwijl een meerdaagse
-            tocht met frequente GPS-sampling enkele megabytes kan bereiken. Hoogte- en tijdstempelgegevens
-            voegen grootte toe, maar zelfs grote bestanden openen snel in moderne mobiele apps.
-          </p>
-          <h3>Kan ik een GPX-bestand bewerken?</h3>
-          <p>
-            Ja. In GPX Viewer kun je routes vanaf nul maken, waypoints bewerken en ze
-            exporteren als nieuwe .gpx-bestanden om te delen met vrienden of later opnieuw te openen.
-          </p>
-
+          <p class="article-meta"><time datetime="2026-09-02">2 september 2026</time></p>
+ <p>Als je een wandelroute hebt gedownload, een fietsroute van een vriend hebt ontvangen of hebt geëxporteerd
+            een GPS-opname van een horloge, je bent vrijwel zeker wel eens tegengekomen<strong>GPX-bestand</strong>.
+            De extensie<code>.gpx</code>staat voor<strong>GPS-uitwisselingsformaat</strong>– een open
+            standaard waarmee apparaten en apps locatiegegevens kunnen delen op een manier die elk compatibel hulpmiddel kan lezen.</p>
+<h2>Wat bevat een GPX-bestand?</h2>
+<p>De meeste GPX-bestanden bevatten een of meer van deze elementen:</p>
+<ul>
+<li><strong>Sporen</strong>— a path made of GPS points, often recorded during a hike or ride.</li>
+<li><strong>Routes</strong>— a planned path with key turns for navigation.</li>
+<li><strong>Waypoints</strong>— points of interest such as summits, campsites, or parking.</li>
+<li><strong>Elevation data</strong>— hoogte boven zeeniveau op elk punt.</li>
+<li><strong>Tijdstempels</strong>— wanneer elk punt werd geregistreerd.</li>
+</ul>
+<p>Een speciale app zoals<a href="../">GPX-viewer</a>geeft die gegevens weer als een interactieve kaart.
+            Zien<a href="how-to-view-gpx-on-a-map.html">hoe je GPX op een kaart kunt bekijken</a>voor de volledige workflow.</p>
+<h2>GPX-tracks versus routes</h2>
+<p>A<strong>spoor</strong>is iets dat u al hebt gereisd: uw apparaat heeft elke GPS-fix geregistreerd.
+            A<strong>route</strong>is van tevoren gepland en verbindt tussenpunten waar u heen wilt.
+            Beide werken op dezelfde manier in GPX Viewer: importeer het bestand en volg de lijn op de kaart.</p>
+<h2>GPX versus KML, TCX en FIT</h2>
+<p>Outdoor-apps gebruiken verschillende GPS-bestandsformaten. Dit is wanneer GPX de juiste keuze is:</p>
+<ul>
+<li><strong>GPX</strong>— het beste voor het delen van wandel- en fietsroutes tussen apps en telefoons.</li>
+<li><strong>KML</strong>— gebruikelijk in Google Earth; minder ideaal voor stapsgewijze routenavigatie.</li>
+<li><strong>TCX</strong>— Garmin trainingsformaat met hartslag- en cadansgegevens.</li>
+<li><strong>FIT</strong>— opnames van binaire activiteiten van Garmin-horloges; niet bedoeld voor het delen van routes.</li>
+</ul>
+<p>Voor het volgen van routes en routeplanning op uw telefoon is GPX het te gebruiken formaat.
+            GPX-viewer wordt geopend<code>.gpx</code>bestanden rechtstreeks — geen conversiestap.</p>
+<h2>Hoe een GPX-bestand te openen</h2>
+<p>Importeer een GPX-bestand op iPhone of Android met behulp van het deelblad van Mail, Bestanden of Safari.
+            Onze gids op<a href="how-to-open-gpx-files-on-iphone.html">GPX-bestanden openen op iPhone en Android</a>behandelt stap voor stap elke importmethode.</p>
           <div class="article-cta">
             <h2>Probeer GPX Viewer gratis</h2>
             <p>Importeer GPX-bestanden, bekijk routes op een kaart en verken hoogteprofielen op iPhone en Android.</p>
@@ -246,7 +144,6 @@
               </a>
             </div>
           </div>
-
           <nav class="article-nav">
             <a href="/nl/blog/">← Terug naar alle gidsen</a>
           </nav>
@@ -261,7 +158,7 @@
           © <span id="year"></span> GPX Viewer
         </span>
         <div class="footer-links">
-          <a href="/nl/">Startpagina</a>
+          <a href="/nl/">Home</a>
           <a href="/nl/privacy.html">Privacy</a>
           <a id="footer-contact" href="mailto:lucas@streiv.app">Contact</a>
         </div>

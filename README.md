@@ -88,11 +88,21 @@ Your full sitemap URL: **https://gpxviewerapp.com/sitemap.xml**
 
 ## SEO included on the site
 
-- `robots.txt` and `sitemap.xml`
+- `robots.txt` and `sitemap.xml` (63 URLs: home, privacy, blog index, 4 guides × 9 languages)
 - Canonical URLs, Open Graph, and Twitter cards
 - JSON-LD structured data (app, organization, FAQ)
 - `og-image.jpg` for social previews
 - Real app screenshots in hero and gallery
+- Old blog URLs redirect to consolidated guides (not in sitemap)
+
+### Blog content
+
+Four consolidated guides (English + 8 translations): what GPX is, how to open files, how to view on a map, and hiking/cycling. Regenerate with:
+
+```bash
+cd ~/Desktop/gpxviewer-website
+.venv/bin/python3 scripts/consolidate-blog.py --translate
+```
 
 ## Local preview
 

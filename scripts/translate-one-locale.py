@@ -23,6 +23,16 @@ TEXT_KEYS = [
 SKIP_TAGS = {"script", "style", "code", "pre"}
 
 LOCALE_UI = {
+    "de": {
+        "nav_features": "Funktionen", "nav_blog": "Blog", "nav_pro": "Pro",
+        "footer_home": "Startseite", "footer_privacy": "Datenschutz", "footer_contact": "Kontakt",
+        "back_link": "← Zurück zu allen Ratgebern", "read_more": "Ratgeber lesen →",
+        "app_store_alt": "Im App Store laden", "play_store_alt": "Bei Google Play herunterladen",
+        "cta_title": "GPX Viewer kostenlos testen",
+        "index_title": "GPX Viewer Blog — GPX-Ratgeber für Wandern, Radfahren & Navigation",
+        "index_desc": "Vier Ratgeber zum Öffnen, Anzeigen und Navigieren von GPX-Dateien auf iPhone und Android.",
+        "index_h1": "GPX Viewer Blog", "index_subtitle": "Wesentliche GPX-Ratgeber für iPhone und Android.",
+    },
     "fr": {
         "nav_features": "Fonctionnalités", "nav_blog": "Blog", "nav_pro": "Pro",
         "footer_home": "Accueil", "footer_privacy": "Confidentialité", "footer_contact": "Contact",
@@ -31,7 +41,7 @@ LOCALE_UI = {
         "cta_title": "Essayez GPX Viewer gratuitement",
         "index_title": "Blog GPX Viewer — Guides GPX pour randonnée, vélo et navigation",
         "index_desc": "Courts guides pour ouvrir, afficher et naviguer des fichiers GPX sur iPhone et Android.",
-        "index_h1": "Blog GPX Viewer", "index_subtitle": "Guides GPX courts pour iPhone et Android.",
+        "index_h1": "Blog GPX Viewer", "index_subtitle": "Guides GPX essentiels pour iPhone et Android.",
     },
     "it": {
         "nav_features": "Funzionalità", "nav_blog": "Blog", "nav_pro": "Pro",
@@ -181,9 +191,6 @@ def translate_entry(en: dict, lang: str, cache: dict, ui: dict) -> dict:
 
 
 def translate_locale(lang: str) -> None:
-    if lang == "de":
-        print("Use add-de-translations.py for German.")
-        return
     if lang not in LOCALE_UI:
         raise SystemExit(f"Unknown locale: {lang}")
 
@@ -213,16 +220,17 @@ def translate_locale(lang: str) -> None:
                                   "card_title", "card_desc", "date_display", "cta_text"}
     }
 
-    for leg in data["legacy_articles"]:
+    for leg in data.get("legacy_articles", []):
         en = leg["translations"]["en"]
         leg.setdefault("translations", {})[lang] = translate_entry(en, lang, cache, {
             "read_more": ui["read_more"],
         })
 
+    total = len(data["articles"])
     for i, art in enumerate(data["articles"], 1):
         en = art["translations"]["en"]
         art.setdefault("translations", {})[lang] = translate_entry(en, lang, cache, ui_keys)
-        print(f"  [{lang}] article {i}/20: {art['slug']}", flush=True)
+        print(f"  [{lang}] article {i}/{total}: {art['slug']}", flush=True)
 
     MANIFEST.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Saved manifest for {lang}")
@@ -239,7 +247,7 @@ def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit("Usage: translate-one-locale.py <fr|it|pt|es|nl|pl|id|all>")
     arg = sys.argv[1]
-    langs = ["fr", "it", "pt", "es", "nl", "pl", "id"] if arg == "all" else [arg]
+    langs = ["de", "fr", "it", "pt", "es", "nl", "pl", "id"] if arg == "all" else [arg]
     for lang in langs:
         print(f"\n=== {lang.upper()} ===", flush=True)
         translate_locale(lang)

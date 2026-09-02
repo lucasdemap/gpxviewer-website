@@ -3,15 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apa Itu File GPX? Panduan Lengkap GPS Exchange Format</title>
-    <meta
-      name="description"
-      content="Pelajari apa itu file GPX, cara kerja GPS Exchange Format, dan mengapa pendaki dan pesepeda menggunakan track .gpx untuk berbagi rute, merekam perjalanan, dan navigasi outdoor."
-    />
-    <meta
-      name="keywords"
-      content="apa itu file gpx, format file gpx, gps exchange format, track gpx, rute gpx"
-    />
+    <title>Apa itu File GPX? Panduan Lengkap Format Pertukaran GPS</title>
+    <meta name="description" content="Pelajari apa itu file GPX, cara kerja trek, rute, dan titik arah, serta perbandingan GPX dengan KML, TCX, dan FIT. Untuk pejalan kaki dan pengendara sepeda di iPhone dan Android." />
+    <meta name="keywords" content="apa itu file gpx, format file gpx, format pertukaran gps, gpx vs kml" />
     <link rel="canonical" href="https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="en" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="de" href="https://gpxviewerapp.com/de/blog/what-is-a-gpx-file.html" />
@@ -23,24 +17,19 @@
     <link rel="alternate" hreflang="pl" href="https://gpxviewerapp.com/pl/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="id" href="https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html" />
     <link rel="alternate" hreflang="x-default" href="https://gpxviewerapp.com/blog/what-is-a-gpx-file.html" />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <meta name="theme-color" content="#14388c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html" />
+    <meta property="og:title" content="Apa itu File GPX? Panduan Lengkap Format Pertukaran GPS" />
+    <meta property="og:description" content="Pelajari apa itu file GPX, cara kerja trek, rute, dan titik arah, serta perbandingan GPX dengan KML, TCX, dan FIT. Untuk pejalan kaki dan pengendara sepeda di iPhone dan Android." />
+    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/images/favicon-48x48.png" type="image/png" sizes="48x48" />
     <link rel="icon" href="/images/favicon-192x192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />
-<meta name="theme-color" content="#14388c" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://gpxviewerapp.com/id/blog/what-is-a-gpx-file.html" />
-    <meta property="og:title" content="Apa Itu File GPX? Panduan Lengkap GPS Exchange Format" />
-    <meta
-      property="og:description"
-      content="Pelajari apa itu file GPX, cara kerja GPS Exchange Format, dan mengapa pendaki dan pesepeda menggunakan track .gpx untuk berbagi rute dan navigasi outdoor."
-    />
-    <meta property="og:image" content="https://gpxviewerapp.com/images/og-image.jpg" />
-    <meta property="og:locale" content="id_ID" />
-
-    <link rel="stylesheet" href="../../css/style.css?v=2" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/lang.css?v=5" />
-<link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
     <script src="../../js/config.js"></script>
     <script src="../../js/seo.js"></script>
     <script src="../../js/analytics.js"></script>
@@ -48,21 +37,15 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Apa Itu File GPX? Panduan Lengkap untuk Pendaki & Pesepeda",
-        "datePublished": "2026-07-11",
+        "headline": "Apa itu File GPX?",
+        "datePublished": "2026-09-02",
         "inLanguage": "id",
-        "author": {
-          "@type": "Person",
-          "name": "GPX Viewer"
-        },
+        "author": { "@type": "Person", "name": "GPX Viewer" },
         "image": "https://gpxviewerapp.com/images/og-image.jpg",
         "publisher": {
           "@type": "Organization",
           "name": "GPX Viewer",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://gpxviewerapp.com/images/app-icon.png"
-          }
+          "logo": { "@type": "ImageObject", "url": "https://gpxviewerapp.com/images/app-icon.png" }
         }
       }
     </script>
@@ -75,11 +58,11 @@
           <span>GPX Viewer</span>
         </a>
         <div class="header-right">
-<nav class="nav-links">
-<a href="/id/#features">Fitur</a>
-          <a href="/id/blog/">Blog</a>
-          <a href="/id/#pricing">Pro</a>
-          <details class="lang-dropdown">
+          <nav class="nav-links">
+            <a href="/id/#features">Fitur</a>
+            <a href="/id/blog/">Blog</a>
+            <a href="/id/#pricing">Pro</a>
+                      <details class="lang-dropdown">
             <summary aria-label="Bahasa">ID</summary>
             <div class="lang-dropdown-menu" role="navigation" aria-label="Bahasa">
               <a href="/blog/what-is-a-gpx-file.html" hreflang="en" title="English">EN</a>
@@ -93,149 +76,65 @@
               <a href="/id/blog/what-is-a-gpx-file.html" hreflang="id" title="Indonesia" class="is-active">ID</a>
             </div>
           </details>
-          <div class="store-badges store-badges--header">
-            <a class="store-badge app-store-link" href="#" data-location="header">
-              <img src="../../images/app-store-badge.svg" alt="Unduh di App Store" />
-            </a>
-            <a class="store-badge play-store-link" href="#" data-location="header">
-              <img src="../../images/google-play-badge.png" alt="Dapatkan di Google Play" />
-            </a>
-          </div>
-        </nav>
-              </div>
+            <div class="store-badges store-badges--header">
+              <a class="store-badge app-store-link" href="#" data-location="header">
+                <img src="../../images/app-store-badge.svg" alt="Unduh di App Store" />
+              </a>
+              <a class="store-badge play-store-link" href="#" data-location="header">
+                <img src="../../images/google-play-badge.png" alt="Dapatkan di Google Play" />
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <div class="page-header">
       <div class="container">
-        <h1>Apa Itu File GPX? Panduan Lengkap untuk Pendaki & Pesepeda</h1>
-        <p>Pahami GPS Exchange Format dan mengapa file .gpx menjadi fondasi navigasi outdoor.</p>
+        <h1>Apa itu File GPX?</h1>
+        <p>Pahami Format Pertukaran GPS dan alasan file .gpx mendukung navigasi luar ruangan.</p>
       </div>
     </div>
 
     <main class="article-page">
       <div class="container article-layout">
         <article class="article-content">
-          <p class="article-meta"><time datetime="2026-07-11">11 Juli 2026</time></p>
-
-          <p>
-            Jika pernah mengunduh jalur hiking, menerima rute bersepeda dari teman, atau mengekspor
-            rekaman GPS dari ponsel atau jam tangan, Anda hampir pasti pernah menemukan
-            <strong>file GPX</strong>. Ekstensi <code>.gpx</code> adalah singkatan dari
-            <strong>GPS Exchange Format</strong> — standar terbuka yang memungkinkan perangkat dan
-            aplikasi berbagi data lokasi dengan cara yang dapat dibaca oleh alat kompatibel mana pun.
-          </p>
-          <p>
-            Tidak seperti format peta proprietary yang terikat pada satu merek, format file GPX
-            didukung secara luas di berbagai ponsel dan perangkat. Portabilitas inilah yang
-            membuat pendaki, pesepeda, dan pelari trail mengandalkannya setiap hari.
-          </p>
-
-          <h2>Apa isi file GPX?</h2>
-          <p>
-            Intinya, file GPX adalah dokumen XML yang menyimpan koordinat geografis beserta
-            metadata opsional. Sebagian besar file mencakup satu atau lebih elemen berikut:
-          </p>
-          <ul>
-            <li><strong>Track</strong> — jalur kontinu dari titik GPS, sering direkam saat hiking atau bersepeda.</li>
-            <li><strong>Rute</strong> — jalur yang direncanakan dengan belokan kunci, berguna untuk navigasi turn-by-turn.</li>
-            <li><strong>Waypoint</strong> — titik minat individual seperti puncak, tempat berkemah, atau area parkir.</li>
-            <li><strong>Data elevasi</strong> — ketinggian di atas permukaan laut di setiap titik, untuk profil tanjakan.</li>
-            <li><strong>Stempel waktu</strong> — kapan setiap titik direkam, membantu analisis kecepatan.</li>
-          </ul>
-          <p>
-            Karena formatnya berbasis teks dan dapat dibaca manusia, Anda bisa membuka file GPX kecil
-            di editor teks apa pun dan melihat nilai lintang, bujur, dan elevasi baris demi baris.
-            Untuk penggunaan sehari-hari, aplikasi khusus seperti
-            <a href="/id/">GPX Viewer</a> merender data mentah tersebut sebagai peta interaktif.
-          </p>
-
-          <h2>Track GPX vs. rute GPX</h2>
-          <p>
-            Istilah ini sering dipakai bergantian, tetapi ada perbedaan penting. <strong>Track</strong>
-            biasanya adalah jalur yang sudah Anda tempuh — ponsel atau jam tangan mencatat setiap
-            fix GPS sepanjang perjalanan. <strong>Rute</strong> biasanya direncanakan sebelumnya,
-            menghubungkan waypoint yang mewakili tujuan perjalanan.
-          </p>
-          <h3>Kapan pendaki menggunakan track GPX</h3>
-          <p>
-            Asosiasi trail, buku panduan, dan sesama pendaki membagikan track GPX agar Anda bisa
-            mengikuti jalur yang sudah mapan di hutan, medan alpine, atau pantai. Memuat file di
-            ponsel memberi referensi visual bahkan saat penanda jalur jarang. Panduan kami tentang
-            <a href="best-gpx-viewer-for-hiking.html">GPX viewer terbaik untuk hiking</a> menjelaskan
-            apa yang perlu dicari saat mengikuti jalur di lapangan.
-          </p>
-          <h3>Kapan pesepeda menggunakan rute GPX</h3>
-          <p>
-            Pesepeda merencanakan loop, sportive, dan petualangan gravel sebagai rute GPX, lalu
-            memuatnya ke ponsel atau head unit. Jika ingin membuat sendiri, baca
-            <a href="how-to-create-gpx-cycling-routes.html">cara membuat rute bersepeda GPX</a>
-            untuk alur kerja langkah demi langkah.
-          </p>
-
-          <h2>Mengapa format file GPX menjadi standar</h2>
-          <p>
-            Sebelum GPX, berbagi data GPS antar merek sangat sulit. Setiap produsen memakai format
-            biner sendiri, dan konversi file memerlukan perangkat lunak khusus. GPS Exchange Format
-            menyelesaikannya dengan menerbitkan skema XML terbuka yang bisa diimplementasikan siapa saja.
-          </p>
-          <p>
-            Karena GPX adalah standar terbuka, file yang Anda terima lewat email bisa langsung dibuka
-            di <a href="/id/">GPX Viewer</a> di ponsel — tanpa langkah konversi.
-          </p>
-
-          <h2>Cara membuka dan melihat file GPX</h2>
-          <p>
-            Cara termudah melihat file GPX di ponsel adalah dengan
-            <a href="/id/">GPX Viewer</a>. Lihat panduan detail kami tentang
-            <a href="how-to-open-gpx-files-on-iphone.html">cara membuka file GPX di iPhone dan Android</a>
-            untuk metode impor dari Mail, Files, dan Safari.
-          </p>
-          <p>
-            Setelah diimpor, Anda ingin tampilan peta yang jelas dengan jarak, elevasi, dan label
-            waypoint. Di sinilah
-            <a href="how-to-view-gpx-on-a-map.html">melihat GPX di peta</a> menjadi penting —
-            penampil yang baik mengubah koordinat menjadi sesuatu yang benar-benar bisa Anda ikuti di lapangan.
-          </p>
-
-          <h2>Apa yang perlu dicari di aplikasi GPX viewer</h2>
-          <p>
-            GPX Viewer dibuat khusus untuk navigasi outdoor. Fitur-fitur ini paling penting:
-          </p>
-          <ul>
-            <li><strong>Impor cepat</strong> — bagikan file langsung dari Mail atau Files tanpa sinkronisasi desktop.</li>
-            <li><strong>Beberapa gaya peta</strong> — tampilan standar, satelit, dan hybrid untuk medan berbeda.</li>
-            <li><strong>Profil elevasi</strong> — lihat tanjakan dan turunan sebelum mulai.</li>
-            <li><strong>Lokasi langsung</strong> — bandingkan posisi real-time dengan track (tersedia dengan GPX Viewer Pro).</li>
-            <li><strong>Pembuatan rute</strong> — rencanakan track baru dan ekspor sebagai file GPX segar.</li>
-          </ul>
-          <p>
-            <a href="/id/">GPX Viewer</a> mencakup semua ini di iOS dan Android. Unduh gratis untuk
-            impor dan jelajahi rute di peta. Upgrade ke Pro untuk pelacakan lokasi langsung agar Anda
-            tahu persis posisi relatif terhadap jalur.
-          </p>
-
-          <h2>Pertanyaan umum tentang file GPX</h2>
-          <h3>Apakah GPX sama dengan KML?</h3>
-          <p>
-            Tidak. KML adalah format peta yang berbeda. GPX adalah pilihan utama untuk navigasi GPS
-            dan mengikuti rute outdoor. GPX Viewer membuka file .gpx langsung di iPhone dan Android.
-          </p>
-          <h3>Seberapa besar file GPX?</h3>
-          <p>
-            Jalan-jalan singkat di sekitar rumah mungkin menghasilkan file 50 KB, sementara trekking
-            multi-hari dengan sampling GPS sering bisa mencapai beberapa megabyte. Data elevasi dan
-            stempel waktu menambah ukuran, tetapi file besar pun terbuka cepat di aplikasi mobile modern.
-          </p>
-          <h3>Bisakah saya mengedit file GPX?</h3>
-          <p>
-            Ya. Di GPX Viewer Anda bisa membuat rute dari awal, mengedit waypoint, dan mengekspornya
-            sebagai file .gpx baru untuk dibagikan ke teman atau dibuka lagi nanti.
-          </p>
-
+          <p class="article-meta"><time datetime="2026-09-02">2 September 2026</time></p>
+ <p>Jika Anda telah mengunduh jalur pendakian, menerima rute bersepeda dari teman, atau mengekspor
+            rekaman GPS dari jam tangan, Anda hampir pasti pernah menjumpai a<strong>berkas GPX</strong>.
+            Ekstensi<code>.gpx</code>singkatan dari<strong>Format Pertukaran GPS</strong>— terbuka
+            standar yang memungkinkan perangkat dan aplikasi berbagi data lokasi dengan cara yang dapat dibaca oleh alat apa pun yang kompatibel.</p>
+<h2>Apa isi file GPX?</h2>
+<p>Kebanyakan file GPX menyertakan satu atau lebih elemen berikut:</p>
+<ul>
+<li><strong>Trek</strong>— jalur yang terbuat dari titik-titik GPS, sering kali direkam saat mendaki atau berkendara.</li>
+<li><strong>Rute</strong>— jalur terencana dengan belokan penting untuk navigasi.</li>
+<li><strong>Titik arah</strong>— tempat menarik seperti pertemuan puncak, tempat perkemahan, atau tempat parkir.</li>
+<li><strong>Data ketinggian</strong>— ketinggian di atas permukaan laut pada setiap titik.</li>
+<li><strong>Stempel waktu</strong>— ketika setiap poin dicatat.</li>
+</ul>
+<p>Aplikasi khusus seperti<a href="../">Penampil GPX</a>menjadikan data itu sebagai peta interaktif.
+            Melihat<a href="how-to-view-gpx-on-a-map.html">cara melihat GPX di peta</a>untuk alur kerja penuh.</p>
+<h2>Trek GPX vs. rute</h2>
+<p>A<strong>melacak</strong>adalah sesuatu yang telah Anda lalui — perangkat Anda mencatat setiap perbaikan GPS.
+            A<strong>rute</strong>direncanakan sebelumnya, menghubungkan titik arah ke mana Anda ingin pergi.
+            Keduanya bekerja dengan cara yang sama di GPX Viewer: impor file dan ikuti garis di peta.</p>
+<h2>GPX vs KML, TCX, dan FIT</h2>
+<p>Aplikasi luar ruangan menggunakan beberapa format file GPS. Inilah saatnya GPX adalah pilihan yang tepat:</p>
+<ul>
+<li><strong>GPX</strong>— terbaik untuk berbagi rute hiking dan bersepeda antara aplikasi dan ponsel.</li>
+<li><strong>KML</strong>— umum di Google Earth; kurang ideal untuk navigasi jalur belokan demi belokan.</li>
+<li><strong>TCX</strong>— Format pelatihan Garmin dengan data detak jantung dan irama.</li>
+<li><strong>BUGAR</strong>— rekaman aktivitas biner dari jam tangan Garmin; tidak dimaksudkan untuk berbagi rute.</li>
+</ul>
+<p>Untuk mengikuti jejak dan perencanaan rute di ponsel Anda, GPX adalah format yang digunakan.
+            Penampil GPX terbuka<code>.gpx</code>file secara langsung — tidak ada langkah konversi.</p>
+<h2>Cara membuka file GPX</h2>
+<p>Impor file GPX di iPhone atau Android menggunakan lembar berbagi dari Mail, File, atau Safari.
+            Panduan kami tentang<a href="how-to-open-gpx-files-on-iphone.html">membuka file GPX di iPhone dan Android</a>mencakup setiap metode impor langkah demi langkah.</p>
           <div class="article-cta">
             <h2>Coba GPX Viewer gratis</h2>
-            <p>Impor file GPX, lihat rute di peta, dan jelajahi profil elevasi di iPhone dan Android.</p>
+            <p>Impor file GPX, lihat rute di peta, dan jelajahi profil ketinggian di iPhone dan Android.</p>
             <div class="store-badges">
               <a class="store-badge app-store-link" href="#" data-location="article_cta">
                 <img src="../../images/app-store-badge-white.svg" alt="Unduh di App Store" />
@@ -245,7 +144,6 @@
               </a>
             </div>
           </div>
-
           <nav class="article-nav">
             <a href="/id/blog/">← Kembali ke semua panduan</a>
           </nav>

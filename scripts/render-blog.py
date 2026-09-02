@@ -35,6 +35,7 @@ FAVICON_BLOCK = """    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />"""
 
 
+def article_path(locale: str, slug: str) -> str:
     if locale == "en":
         return f"/blog/{slug}.html"
     return f"/{locale}/blog/{slug}.html"
@@ -363,8 +364,7 @@ def main() -> None:
 
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     articles = data["articles"]
-    legacy = data.get("legacy_articles", [])
-    index_articles = legacy + articles
+    index_articles = articles
 
     locales = LANG_CODES
     if len(sys.argv) > 1 and sys.argv[1] == "--locales":
